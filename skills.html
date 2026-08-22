@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skills — Fathon Kamal</title>
-<meta name="description" content="Skill matrix dan progres belajar cybersecurity Fathon Kamal — jaringan, Linux, Nmap, Wireshark, dan skill matrix TryHackMe.">
+<meta name="description" content="Skill checkpoint, toolkit, dan skill matrix TryHackMe Fathon Kamal — jaringan, Linux, Nmap, Wireshark.">
 <meta property="og:title" content="Skills — Fathon Kamal">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,20 +16,19 @@
 
 <header class="topnav">
   <div class="wrap">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Logo"><span class="glitch" data-text="fatonkamal_">fatonkamal_</span><span class="alias"></span></a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Fathon Kamal logo"><span class="brand-name">fatonkamal_</span><span class="alias"></span></a>
     <nav class="navlinks">
       <a href="index.html" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
       <a href="skills.html" class="active" data-id="Skills" data-en="Skills">Skills</a>
-      <a href="tools.html" data-id="Tools" data-en="Tools">Tools</a>
       <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-      <a href="ctf.html">CTF</a>
+      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
       <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-icon-github" href="#" aria-label="GitHub" target="_blank" rel="noopener"></a>
-      <a class="nav-icon-linkedin" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a class="nav-icon-github" href="https://github.com/fatonkamal035-Cybersecurity" aria-label="GitHub" target="_blank" rel="noopener"></a>
+      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
       <div class="lang-switch" role="group" aria-label="Ganti bahasa">
         <button class="lang-opt active" data-lang="id" type="button">ID</button>
         <button class="lang-opt" data-lang="en" type="button">EN</button>
@@ -40,10 +39,9 @@
   <div class="mobile-menu">
     <a href="index.html" data-id="Home" data-en="Home">Home</a>
     <a href="about.html" data-id="About" data-en="About">About</a>
-    <a href="skills.html" class="active">Skills</a>
-    <a href="tools.html" data-id="Tools" data-en="Tools">Tools</a>
+    <a href="skills.html" class="active" data-id="Skills" data-en="Skills">Skills</a>
     <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-    <a href="ctf.html">CTF</a>
+    <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
     <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
     <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
   </div>
@@ -51,7 +49,7 @@
 
 <div class="page-header">
   <div class="wrap">
-    <div class="file-no">FILE NO. 003 · SKILL MATRIX</div>
+    <div class="file-no">FILE NO. 003 · SKILLS</div>
     <h1><span class="prompt">&gt;</span> Skills</h1>
     <p data-id="Kemampuan yang sedang diasah, ditampilkan apa adanya — bukan angka karangan." data-en="Skills currently being developed, shown as they are — not invented numbers.">Kemampuan yang sedang diasah, ditampilkan apa adanya — bukan angka karangan.</p>
   </div>
@@ -62,9 +60,20 @@
     <div class="section-head reveal">
       <div class="eyebrow" data-id="Progres" data-en="Progress">Progres</div>
       <h2 data-id="Checkpoint Belajar" data-en="Learning Checkpoints">Checkpoint Belajar</h2>
-      <p data-id="Persentase ini adalah checkpoint jujur berdasarkan aktivitas nyata (room yang diselesaikan, jam praktik), bukan skor ujian." data-en="These percentages are honest checkpoints based on real activity (rooms completed, practice hours), not exam scores.">Persentase ini adalah checkpoint jujur berdasarkan aktivitas nyata (room yang diselesaikan, jam praktik), bukan skor ujian.</p>
+      <p data-id="Level di bawah ini adalah checkpoint jujur berdasarkan aktivitas nyata — room yang diselesaikan, jam praktik — bukan skor ujian atau angka karangan. Beberapa terhubung langsung ke write-up sebagai bukti." data-en="The levels below are honest checkpoints based on real activity — rooms completed, practice hours — not exam scores or invented numbers. Some link directly to a write-up as evidence.">Level di bawah ini adalah checkpoint jujur berdasarkan aktivitas nyata — room yang diselesaikan, jam praktik — bukan skor ujian atau angka karangan. Beberapa terhubung langsung ke write-up sebagai bukti.</p>
     </div>
-    <div class="skills-grid" id="skillsGrid"></div>
+    <div class="skill-groups" id="skillsGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="toolkit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-id="Toolkit" data-en="Toolkit">Toolkit</div>
+      <h2 data-id="Tools & Platform" data-en="Tools & Platforms">Tools & Platform</h2>
+      <p data-id="Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini." data-en="Only tools that have actually been used or are currently being learned are listed here.">Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini.</p>
+    </div>
+    <div class="card-grid reveal" id="toolsGrid"></div>
   </div>
 </section>
 
@@ -79,6 +88,17 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-id="Privasi" data-en="Privacy">Privasi</div>
+      <h2 data-id="Privacy & Anonymity" data-en="Privacy & Anonymity">Privacy &amp; Anonymity</h2>
+      <p data-id="Memahami privasi digital — termasuk konsep onion routing seperti pada Tor — adalah bagian dari kesadaran keamanan yang sedang dipelajari, bukan klaim penguasaan tool ini." data-en="Understanding digital privacy — including onion-routing concepts like Tor — is part of the security awareness currently being learned, not a claim of mastering this tool.">Memahami privasi digital — termasuk konsep onion routing seperti pada Tor — adalah bagian dari kesadaran keamanan yang sedang dipelajari, bukan klaim penguasaan tool ini.</p>
+    </div>
+    <a class="btn ghost" href="https://www.torproject.org/" target="_blank" rel="noopener" data-id="Pelajari Tor Project →" data-en="Learn about Tor Project →">Pelajari Tor Project →</a>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-left">
@@ -88,7 +108,7 @@
     <nav class="footer-nav">
       <a href="index.html" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
-      <a href="ctf.html">CTF</a>
+      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
     <div id="footerSocials" style="display:flex;gap:10px;"></div>

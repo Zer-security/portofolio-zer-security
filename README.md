@@ -1,68 +1,53 @@
-# Halo, saya Fathon Kamal (Faton K.R) 👋
+# Halo, saya Fathon Kamal (fatonkamal035) 👋
 
-Pelajar SMA Negeri 1 Gringsing (Jurusan IPA) dari Batang, Jawa Tengah, yang sedang membangun jalur karier di bidang **Cyber Security & Ethical Hacking**. Fokus saat ini: belajar dari nol secara konsisten menuju kesiapan magang/kerja sebagai Cyber Security Analyst / Penetration Tester.
+Aspiring Cybersecurity Professional — belajar cybersecurity dari nol lewat roadmap terstruktur: networking, Linux, dan security fundamentals. Setiap progres didokumentasikan secara terbuka, bukan sekadar diklaim.
 
----
-
-## 🧭 About
-
-- 🎯 Tujuan: Internship / kerja di bidang Cyber Security
-- 🧑‍💻 Belajar terarah lewat roadmap 8 minggu (jaringan → Linux → tools → praktik langsung)
-- 🛠️ Tools utama: Kali Linux, Nmap, Wireshark
-- 📚 Platform latihan: TryHackMe, Hack The Box
-- 🧠 Riset materi belajar dibantu NotebookLM
+**🌐 Portfolio:** [fatonkamal035-cybersecurity.github.io](https://fatonkamal035-cybersecurity.github.io)
 
 ---
 
-## 🧩 Skills
+## About
 
-| Skill | Progress |
-|---|---|
-| Jaringan Dasar (TCP/IP, subnetting, OSI) | 35% |
-| Linux & Kali Linux | 45% |
-| Nmap | 10% |
-| Wireshark | 10% |
-| Riset Mandiri (NotebookLM) | 40% |
+Saya masih di tahap awal perjalanan cybersecurity, belajar dari nol lewat roadmap terstruktur: networking, Linux, sampai tools penetration testing dasar. Praktik langsung di Kali Linux, menyelesaikan room di TryHackMe, dan mendokumentasikan semuanya di portofolio ini.
 
----
+## Current Focus
 
-## 📈 Progress
+- Networking (TCP/IP, subnetting, OSI)
+- Linux & Kali Linux
+- Security Fundamentals (TryHackMe Cyber Security 101)
+- CTF / Security Labs
+- Technical Write-ups
 
-**TryHackMe** — [@fatonkamal035](https://tryhackme.com/p/fatonkamal035)
-- Level 2 · 304 XP · Bronze League #4/30
-- Path: Cyber Security 101
-- Rank: 50% Teratas
-- Lencana: 3
-- Garis (streak): 4 hari
-- Ruangan selesai: 7
+## Projects
 
-**Hack The Box** — [@FKRR](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
-- Baru mulai, write-up pertama menyusul
+| Project | Deskripsi | Link |
+|---|---|---|
+| Portfolio Website Ini | Website multi-halaman data-driven (HTML/CSS/JS murni), dwibahasa ID/EN, terminal CLI interaktif. | Repo ini |
 
----
+## Write-ups
 
-## 📝 CTF Write-ups
+Dokumentasi teknis lengkap ada di [`/notes`](./notes) dan halaman [Write-ups](https://fatonkamal035-cybersecurity.github.io/writeups.html) di website.
 
-Dokumentasi lengkap ada di folder [`/notes`](./notes).
-
-| Room | Platform | Kategori | Link |
+| Write-up | Platform | Kategori | Difficulty |
 |---|---|---|---|
-| Web Fundamentals | TryHackMe | Web | [notes/web-fundamentals.md](./notes/web-fundamentals.md) |
-| Linux Fundamentals Part 1 | TryHackMe | Linux | [notes/linux-fundamentals-part-1.md](./notes/linux-fundamentals-part-1.md) |
+| [Web Fundamentals](./notes/web-fundamentals.md) | TryHackMe | Web Security | Easy |
+| [Linux Fundamentals Part 1](./notes/linux-fundamentals-part-1.md) | TryHackMe | Linux | Easy |
 
-Room lain yang sudah diselesaikan (menyusul ditulis write-up-nya): Karier di Bidang Siber, Keterampilan Pencarian, Pengantar Keamanan Defensif, Pengantar Keamanan Serangan, Hydra (Brute Force), Nmap Live Host Discovery.
+## Learning Journey
 
----
+- **TryHackMe** — [@fatonkamal035](https://tryhackme.com/p/fatonkamal035) · Rank Top 50% · Level 2 (Apprentice) · 3 badges · 7 room selesai
+- **Hack The Box** — [profil publik](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd), baru dimulai
 
-## 📫 Contact
+## Certifications
 
-- 🌐 Website: [fatonkamal035-cybersecurity.github.io](https://fatonkamal035-cybersecurity.github.io)
-- 💼 LinkedIn: [fathon-r-97636842a](https://linkedin.com/in/fathon-r-97636842a)
-- 💬 Discord: [Join](https://discord.gg/TUyb7mwu)
-- 🎯 Hack The Box: [FKRR](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
-- 🧪 TryHackMe: [fatonkamal035](https://tryhackme.com/p/fatonkamal035)
+Belum ada — slot ini akan diisi begitu sertifikasi cybersecurity pertama diperoleh.
+
+## Contact
+
+- 💼 LinkedIn: [fathon-r-97636842a](https://www.linkedin.com/in/fathon-r-97636842a/)
+- 💬 Discord: [Join](https://discord.gg/zxSYjNhP)
 - 📧 Email: fathonkamal045@gmail.com
 
 ---
 
-*Di dukung oleh Kali Linux.*
+*Authenticity > flashy design. Evidence > claims.*

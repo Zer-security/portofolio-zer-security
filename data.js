@@ -7,13 +7,12 @@
 const PROFILE = {
   name: "Fathon Kamal",
   alias: "fatonkamal035",
-  role: { id: "Cybersecurity Enthusiast", en: "Cybersecurity Enthusiast" },
+  role: { id: "Aspiring Cybersecurity Professional", en: "Aspiring Cybersecurity Professional" },
   tagline: {
     id: "Belajar ethical hacking dari nol — satu langkah pasti setiap minggu.",
     en: "Learning ethical hacking from scratch — one deliberate step every week."
   },
-  focus: ["Penetration Testing", "Network Security", "CTF", "Linux"],
-  location: { id: "[LOKASI BELUM DIISI]", en: "[LOCATION NOT SET]" },
+  focus: ["Networking", "Linux", "Security Fundamentals", "CTF / Security Labs", "Technical Write-ups"],
   status: "ONLINE",
 
   bio: {
@@ -37,8 +36,8 @@ const PROFILE = {
     email: "fathonkamal045@gmail.com",
     tryhackme: "https://tryhackme.com/p/fatonkamal035",
     hackthebox: "https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd",
-    discord: "https://discord.gg/juqz5Mrx",
-    linkedin: "https://www.linkedin.com/in/fathon-r-97636842a"
+    discord: "https://discord.gg/zxSYjNhP",
+    linkedin: "https://www.linkedin.com/in/fathon-r-97636842a/"
   },
 
   dashboard: [
@@ -62,12 +61,29 @@ const PROFILE = {
     ]
   },
 
-  skills: [
-    { name: { id: "Jaringan Dasar", en: "Networking Fundamentals" }, pct: 35, note: { id: "TCP/IP, subnetting, model OSI", en: "TCP/IP, subnetting, OSI model" } },
-    { name: { id: "Linux & Kali Linux", en: "Linux & Kali Linux" }, pct: 45, note: { id: "Instalasi selesai, aktif latihan CLI", en: "Installation done, actively practicing the CLI" } },
-    { name: { id: "Nmap", en: "Nmap" }, pct: 20, note: { id: "Sudah praktik Nmap Live Host Discovery", en: "Practiced Nmap Live Host Discovery" } },
-    { name: { id: "Wireshark", en: "Wireshark" }, pct: 10, note: { id: "Baru kenal dasar analisis paket", en: "Just getting started with packet analysis" } },
-    { name: { id: "Password Attacks (Hydra)", en: "Password Attacks (Hydra)" }, pct: 15, note: { id: "Selesai room Hydra di TryHackMe", en: "Completed the Hydra room on TryHackMe" } }
+  skillGroups: [
+    {
+      category: { id: "Keamanan", en: "Security" },
+      items: [
+        { name: { id: "Fundamental Keamanan Siber", en: "Security Fundamentals" }, level: { id: "Foundational", en: "Foundational" }, note: { id: "Sedang menjalani path Cyber Security 101 di TryHackMe", en: "Currently working through the Cyber Security 101 path on TryHackMe" }, evidence: { label: { id: "Lihat progress →", en: "See progress →" }, href: "writeups.html#learning-journey" } },
+        { name: { id: "Web Security Fundamentals", en: "Web Security Fundamentals" }, level: { id: "Learning", en: "Learning" }, note: { id: "HTTP, status code, cookies, DNS", en: "HTTP, status codes, cookies, DNS" }, evidence: { label: { id: "Baca write-up →", en: "Read write-up →" }, href: "writeups.html#web-fundamentals" } },
+        { name: { id: "Password & Credential Attacks", en: "Password & Credential Attacks" }, level: { id: "Practicing", en: "Practicing" }, note: { id: "Praktik brute-force dengan Hydra", en: "Practiced brute-force attacks with Hydra" }, evidence: { label: { id: "Lihat progress →", en: "See progress →" }, href: "writeups.html#learning-journey" } }
+      ]
+    },
+    {
+      category: { id: "Jaringan", en: "Networking" },
+      items: [
+        { name: { id: "Jaringan Dasar (TCP/IP, Subnetting, OSI)", en: "Networking Fundamentals (TCP/IP, Subnetting, OSI)" }, level: { id: "Learning", en: "Learning" }, note: { id: "Belajar lewat roadmap terstruktur", en: "Learning through a structured roadmap" }, evidence: null },
+        { name: { id: "Network Scanning (Nmap)", en: "Network Scanning (Nmap)" }, level: { id: "Practicing", en: "Practicing" }, note: { id: "Praktik Nmap Live Host Discovery", en: "Practiced Nmap Live Host Discovery" }, evidence: { label: { id: "Lihat progress →", en: "See progress →" }, href: "writeups.html#learning-journey" } },
+        { name: { id: "Analisis Paket (Wireshark)", en: "Packet Analysis (Wireshark)" }, level: { id: "Learning", en: "Learning" }, note: { id: "Baru mulai mempelajari dasar-dasarnya", en: "Just getting started with the basics" }, evidence: null }
+      ]
+    },
+    {
+      category: { id: "Sistem", en: "Systems" },
+      items: [
+        { name: { id: "Linux & Kali Linux", en: "Linux & Kali Linux" }, level: { id: "Practicing", en: "Practicing" }, note: { id: "Instalasi selesai, aktif latihan command line", en: "Installation complete, actively practicing the command line" }, evidence: { label: { id: "Baca write-up →", en: "Read write-up →" }, href: "writeups.html#linux-fundamentals" } }
+      ]
+    }
   ],
 
   tools: [
@@ -83,16 +99,44 @@ const PROFILE = {
     {
       name: { id: "Portofolio Website Ini", en: "This Portfolio Website" },
       category: { id: "Web / Personal Branding", en: "Web / Personal Branding" },
+      label: { id: "Learning Project", en: "Learning Project" },
+      objective: { id: "Membangun portofolio pribadi untuk mendokumentasikan progres belajar cybersecurity secara terbuka dan bisa diakses recruiter.", en: "Build a personal portfolio to document my cybersecurity learning progress openly and make it accessible to recruiters." },
+      built: { id: "Website multi-halaman dengan struktur data terpusat (satu file data.js untuk semua konten), dukungan dwibahasa (ID/EN), dan terminal CLI interaktif kecil.", en: "A multi-page site with centralized data (one data.js file driving all content), bilingual support (ID/EN), and a small interactive CLI terminal." },
+      learned: { id: "Cara memisahkan data dan tampilan (data-driven rendering), dasar aksesibilitas web, dan pentingnya desain yang jujur — bukan sekadar terlihat keren.", en: "How to separate data from presentation (data-driven rendering), basic web accessibility, and the importance of honest design — not just looking cool." },
       desc: { id: "Website portofolio pribadi bertema cybersecurity, dibangun dengan HTML/CSS/JS murni dan di-hosting di GitHub Pages.", en: "Personal cybersecurity-themed portfolio site, built with vanilla HTML/CSS/JS and hosted on GitHub Pages." },
       status: { id: "Live", en: "Live" },
       github: "https://github.com/fatonkamal035-Cybersecurity"
+    }
+  ],
+
+  writeups: [
+    {
+      slug: "web-fundamentals",
+      title: { id: "Web Fundamentals", en: "Web Fundamentals" },
+      platform: "TryHackMe",
+      category: { id: "Web Security", en: "Web Security" },
+      difficulty: "Easy",
+      description: {
+        id: "Pengenalan dasar cara kerja web — bagaimana browser dan server berkomunikasi lewat HTTP. Praktik langsung request/response, status code, cookies, dan DNS lewat browser & cURL.",
+        en: "A basics-level look at how the web works — how browsers and servers communicate over HTTP. Hands-on practice with requests/responses, status codes, cookies, and DNS via browser & cURL."
+      },
+      topics: ["HTTP", "Status Codes", "Cookies", "DNS", "cURL"],
+      roomUrl: "https://tryhackme.com/room/webfundamentals",
+      writeupUrl: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io/blob/main/notes/web-fundamentals.md"
     },
     {
-      name: { id: "Project Berikutnya", en: "Next Project" },
-      category: { id: "TBD", en: "TBD" },
-      desc: { id: "Slot untuk project atau tool security berikutnya yang sedang direncanakan.", en: "Slot for the next security project or tool currently being planned." },
-      status: { id: "Segera", en: "Coming Soon" },
-      github: null
+      slug: "linux-fundamentals",
+      title: { id: "Linux Fundamentals Part 1", en: "Linux Fundamentals Part 1" },
+      platform: "TryHackMe",
+      category: { id: "Linux", en: "Linux" },
+      difficulty: "Easy",
+      description: {
+        id: "Pengenalan dasar navigasi Linux lewat terminal — perintah ls, cd, pwd, cat, dan struktur filesystem Linux. Fondasi yang dipakai hampir semua tools security (Nmap, Wireshark, dll).",
+        en: "A basics-level introduction to navigating Linux via the terminal — ls, cd, pwd, cat, and the Linux filesystem structure. A foundation used by nearly every security tool (Nmap, Wireshark, etc.)."
+      },
+      topics: ["CLI Navigation", "Filesystem", "ls/cd/pwd/cat"],
+      roomUrl: "https://tryhackme.com/room/linuxfundamentalspart1",
+      writeupUrl: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io/blob/main/notes/linux-fundamentals-part-1.md"
     }
   ],
 
@@ -106,7 +150,7 @@ const PROFILE = {
       roomsCompleted: 7,
       rooms: [
         { name: "Hydra", difficulty: "Easy" },
-        { name: "Linux Fundamentals Part 1", difficulty: "Info" },
+        { name: "Linux Fundamentals Part 1", difficulty: "Easy" },
         { name: "Nmap Live Host Discovery", difficulty: "Medium" },
         { name: "Careers in Cyber", difficulty: "Info" },
         { name: "Search Skills", difficulty: "Easy" },
@@ -127,9 +171,8 @@ const I18N = {
     home: { id: "Home", en: "Home" },
     about: { id: "About", en: "About" },
     skills: { id: "Skills", en: "Skills" },
-    tools: { id: "Tools", en: "Tools" },
     projects: { id: "Projects", en: "Projects" },
-    ctf: { id: "CTF", en: "CTF" },
+    writeups: { id: "Write-ups", en: "Write-ups" },
     certifications: { id: "Certifications", en: "Certifications" },
     contact: { id: "Contact", en: "Contact" }
   }

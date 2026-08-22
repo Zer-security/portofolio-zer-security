@@ -74,6 +74,13 @@ function renderNavIcons(){
   document.querySelectorAll('.nav-icon-linkedin').forEach(el=>{ el.innerHTML = ICONS.linkedin; el.href = PROFILE.links.linkedin; });
 }
 
+function renderHeroRole(){
+  const roleEl = document.getElementById('heroRole');
+  if(roleEl) roleEl.innerHTML = `<span class="status-dot">●</span> ${t(PROFILE.role)}`;
+  const tagsEl = document.getElementById('heroFocusTags');
+  if(tagsEl) tagsEl.innerHTML = PROFILE.focus.map(f=> `<span>${f}</span>`).join('');
+}
+
 function renderWhoami(mountId){
   const el = document.getElementById(mountId);
   if(!el) return;
@@ -82,7 +89,6 @@ function renderWhoami(mountId){
     { label:{id:'Alias',en:'Alias'}, value: PROFILE.alias },
     { label:{id:'Role',en:'Role'}, value: t(PROFILE.role) },
     { label:{id:'Fokus',en:'Focus'}, value: PROFILE.focus.join(', ') },
-    { label:{id:'Lokasi',en:'Location'}, value: t(PROFILE.location) },
     { label:{id:'Status',en:'Status'}, value: '\u25CF ' + PROFILE.status, cls:' status-online' }
   ];
   el.innerHTML = items.map(it=> `<div class="whoami-item"><span class="label">${t(it.label)}</span><span class="value${it.cls||''}">${it.value}</span></div>`).join('');
@@ -94,14 +100,23 @@ function renderDashboard(mountId){
   el.innerHTML = PROFILE.dashboard.map(d=> `<div class="dash-card"><div class="dlabel">${d.label}</div><div class="dvalue"><span class="pulse-dot"></span>${d.value}</div></div>`).join('');
 }
 
-function renderSkillsPct(mountId){
+function renderSkillGroups(mountId){
   const el = document.getElementById(mountId);
   if(!el) return;
-  el.innerHTML = PROFILE.skills.map(s=> `
-    <div class="skill-card">
-      <div class="name-row"><span class="name">${t(s.name)}</span><span class="pct">${s.pct}%</span></div>
-      <div class="bar-track"><div class="bar-fill" style="width:${s.pct}%"></div></div>
-      <p class="note">${t(s.note)}</p>
+  el.innerHTML = PROFILE.skillGroups.map(group=> `
+    <div class="skill-group">
+      <h3 class="skill-group-title">${t(group.category)}</h3>
+      <div class="skill-group-items">
+        ${group.items.map(s=>{
+          const lvlKey = (s.level.en || '').toLowerCase();
+          const evidence = s.evidence ? `<div><a class="evidence-link" href="${s.evidence.href}">${t(s.evidence.label)}</a></div>` : '';
+          return `<div class="skill-card">
+            <div class="name-row"><span class="name">${t(s.name)}</span><span class="level-badge lvl-${lvlKey}">${t(s.level)}</span></div>
+            <p class="note">${t(s.note)}</p>
+            ${evidence}
+          </div>`;
+        }).join('')}
+      </div>
     </div>`).join('');
 }
 
@@ -133,14 +148,38 @@ function renderProjects(mountId){
   el.innerHTML = PROFILE.projects.map(p=> `
     <div class="project-card">
       <div class="p-cat">${t(p.category)}</div>
+      <span class="status-badge" style="margin-bottom:10px;">${t(p.label)}</span>
       <h3>${t(p.name)}</h3>
-      <p>${t(p.desc)}</p>
-      <span class="status-badge${p.status.id==='Segera' ? ' soon' : ''}">${t(p.status)}</span>
+      <p>${t(p.objective || p.desc)}</p>
+      ${p.built ? `<p><strong style="color:var(--ink);">${currentLang==='id'?'Dibangun':'Built'}:</strong> ${t(p.built)}</p>` : ''}
+      ${p.learned ? `<p><strong style="color:var(--ink);">${currentLang==='id'?'Dipelajari':'Learned'}:</strong> ${t(p.learned)}</p>` : ''}
+      <span class="status-badge">${t(p.status)}</span>
       ${p.github ? `<div style="margin-top:10px;"><a class="p-link" href="${p.github}" target="_blank" rel="noopener">GitHub \u2192</a></div>` : ''}
     </div>`).join('');
 }
 
-function renderCTF(){
+function renderWriteups(mountId){
+  const el = document.getElementById(mountId);
+  if(!el) return;
+  const progressNote = document.getElementById('writeupsProgressNote');
+  if(progressNote){
+    const done = PROFILE.writeups.length;
+    const total = PROFILE.ctf.tryhackme.roomsCompleted;
+    progressNote.textContent = currentLang === 'id'
+      ? `${done} dari ${total} room TryHackMe yang sudah diselesaikan sudah didokumentasikan penuh di sini. Sisanya menyusul.`
+      : `${done} of ${total} completed TryHackMe rooms are fully documented here. The rest are coming.`;
+  }
+  el.innerHTML = PROFILE.writeups.map(w=> `
+    <div class="writeup-card" id="${w.slug}">
+      <div class="w-cat">${w.platform} · ${t(w.category)}</div>
+      <h3>${t(w.title)}</h3>
+      <div class="tag-row"><span class="diff-tag ${w.difficulty.toLowerCase()}">${w.difficulty}</span>${w.topics.map(tp=> `<span>${tp}</span>`).join('')}</div>
+      <p>${t(w.description)}</p>
+      <a class="w-link" href="${w.writeupUrl}" target="_blank" rel="noopener" data-id="Baca Write-up →" data-en="Read Write-up →">${currentLang==='id'?'Baca Write-up →':'Read Write-up →'}</a>
+    </div>`).join('');
+}
+
+function renderLearningJourney(){
   const th = PROFILE.ctf.tryhackme;
   const statsEl = document.getElementById('ctfStats');
   if(statsEl){
@@ -211,13 +250,15 @@ function renderBio(mountId){
 function renderAll(){
   renderBrandAlias();
   renderNavIcons();
+  renderHeroRole();
   renderWhoami('whoamiGrid');
   renderDashboard('dashGrid');
-  renderSkillsPct('skillsGrid');
+  renderSkillGroups('skillsGrid');
   renderSkillMatrix('skillMatrixTags', 'skillMatrixNote');
   renderTools('toolsGrid');
   renderProjects('projectsGrid');
-  renderCTF();
+  renderWriteups('writeupsGrid');
+  renderLearningJourney();
   renderCertifications('certsArea');
   renderConnect('connectGrid');
   renderFooterSocials('footerSocials');
@@ -253,58 +294,7 @@ function initReveal(){
   }
 }
 
-/* ---------- MATRIX CODE-RAIN BACKGROUND (hero only, lightweight) ---------- */
-function initMatrix(){
-  const canvas = document.getElementById('matrixCanvas');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const chars = 'アイウエオカキクケコ01$#@%&+=';
-  let w, h, columns, drops;
-
-  function resize(){
-    const parent = canvas.parentElement;
-    w = canvas.width = parent.offsetWidth;
-    h = canvas.height = parent.offsetHeight;
-    columns = Math.max(8, Math.floor(w / 18));
-    drops = Array.from({ length: columns }, () => Math.random() * (h / 18));
-  }
-  function frame(){
-    ctx.fillStyle = 'rgba(5,5,5,0.08)';
-    ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = '#00ff41';
-    ctx.font = '14px monospace';
-    drops.forEach((y, i)=>{
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(char, i * 18, y * 18);
-      if(y * 18 > h && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
-    });
-  }
-  resize();
-  window.addEventListener('resize', resize);
-  if(reduceMotion){
-    ctx.fillStyle = '#050505';
-    ctx.fillRect(0, 0, w, h);
-  } else {
-    setInterval(frame, 65);
-  }
-}
-
-/* ---------- GLITCH (occasional, not constant) ---------- */
-function initGlitch(){
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduceMotion) return;
-  const targets = document.querySelectorAll('.glitch');
-  if(!targets.length) return;
-  setInterval(()=>{
-    const el = targets[Math.floor(Math.random() * targets.length)];
-    el.classList.add('glitching');
-    setTimeout(()=> el.classList.remove('glitching'), 220);
-  }, 4200);
-}
-
-/* ---------- INTERACTIVE TERMINAL (home page highlight) ---------- */
+/* ---------- INTERACTIVE TERMINAL (home page highlight, supporting element) ---------- */
 function initTerminal(){
   const input = document.getElementById('itermInput');
   const output = document.getElementById('itermOutput');
@@ -319,8 +309,8 @@ function initTerminal(){
   }
 
   const helpText = currentLang === 'id'
-    ? 'Perintah tersedia:\n\n  whoami      tampilkan profil\n  skills      tampilkan skill matrix\n  tools       tampilkan toolkit\n  projects    tampilkan operations\n  contact     tampilkan info kontak\n  social      tampilkan link sosial\n  clear       bersihkan layar'
-    : 'Available commands:\n\n  whoami      show profile\n  skills      show skill matrix\n  tools       show toolkit\n  projects    show operations\n  contact     show contact info\n  social      show social links\n  clear       clear the screen';
+    ? 'Perintah tersedia:\n\n  whoami      tampilkan profil\n  skills      tampilkan skill matrix\n  tools       tampilkan toolkit\n  projects    tampilkan project\n  writeups    tampilkan write-up\n  contact     tampilkan info kontak\n  social      tampilkan link sosial\n  clear       bersihkan layar'
+    : 'Available commands:\n\n  whoami      show profile\n  skills      show skill matrix\n  tools       show toolkit\n  projects    show projects\n  writeups    show write-ups\n  contact     show contact info\n  social      show social links\n  clear       clear the screen';
 
   const commands = {
     help: ()=> helpText,
@@ -332,6 +322,7 @@ function initTerminal(){
     },
     tools: ()=> PROFILE.tools.map(tool=> `  ${tool.name.padEnd(16)} ${t(tool.category)}`).join('\n'),
     projects: ()=> PROFILE.projects.map(p=> `  ${t(p.name)} [${t(p.status)}]`).join('\n'),
+    writeups: ()=> PROFILE.writeups.map(w=> `  ${t(w.title).padEnd(28)} ${w.platform} · ${w.difficulty}`).join('\n'),
     contact: ()=> `Email   : ${PROFILE.links.email}\nDiscord : ${PROFILE.links.discord}`,
     social: ()=> Object.keys(PROFILE.links).map(k=> `  ${k.padEnd(11)} ${PROFILE.links[k]}`).join('\n')
   };
@@ -387,8 +378,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   renderAll();
   initMobileMenu();
   initReveal();
-  initMatrix();
-  initGlitch();
   initTerminal();
   initContactForm();
 });
