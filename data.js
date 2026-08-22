@@ -29,7 +29,7 @@ const PROFILE = {
   },
 
   links: {
-    github: "https://github.com/fatonkamal035-Cybersecurity",
+    github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io",
     youtube: "https://youtube.com/@gxsmacine_025?si=J67fFeJ-gTtg4mq9",
     tiktok: "https://www.tiktok.com/@fkrr_025?_r=1&_t=ZS-98RF6zHrfpx",
     instagram: "https://www.instagram.com/fkrr_035?igsh=MWtvOXd1YmMxM2FtYg==",
@@ -105,7 +105,7 @@ const PROFILE = {
       learned: { id: "Cara memisahkan data dan tampilan (data-driven rendering), dasar aksesibilitas web, dan pentingnya desain yang jujur — bukan sekadar terlihat keren.", en: "How to separate data from presentation (data-driven rendering), basic web accessibility, and the importance of honest design — not just looking cool." },
       desc: { id: "Website portofolio pribadi bertema cybersecurity, dibangun dengan HTML/CSS/JS murni dan di-hosting di GitHub Pages.", en: "Personal cybersecurity-themed portfolio site, built with vanilla HTML/CSS/JS and hosted on GitHub Pages." },
       status: { id: "Live", en: "Live" },
-      github: "https://github.com/fatonkamal035-Cybersecurity"
+      github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io"
     }
   ],
 

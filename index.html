@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fathon Kamal — Cybersecurity Portfolio // Digital Identity</title>
-<meta name="description" content="Portofolio cybersecurity Fathon Kamal (fatonkamal035) — ethical hacking, penetration testing, CTF di TryHackMe & Hack The Box.">
-<meta property="og:title" content="Fathon Kamal — Cybersecurity Portfolio">
-<meta property="og:description" content="Portofolio cybersecurity: skills, tools, CTF progress, dan projects.">
+<title>Fathon Kamal — Aspiring Cybersecurity Professional</title>
+<meta name="description" content="Portofolio cybersecurity Fathon Kamal (fatonkamal035) — belajar networking, Linux, dan security fundamentals lewat TryHackMe & Hack The Box, terdokumentasi lewat write-up teknis.">
+<meta property="og:title" content="Fathon Kamal — Aspiring Cybersecurity Professional">
+<meta property="og:description" content="Portofolio cybersecurity: skills, projects, dan technical write-ups.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,20 +18,19 @@
 
 <header class="topnav">
   <div class="wrap">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Logo"><span class="glitch" data-text="fatonkamal_">fatonkamal_</span><span class="alias"></span></a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Fathon Kamal logo"><span class="brand-name">fatonkamal_</span><span class="alias"></span></a>
     <nav class="navlinks">
       <a href="index.html" class="active" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
       <a href="skills.html" data-id="Skills" data-en="Skills">Skills</a>
-      <a href="tools.html" data-id="Tools" data-en="Tools">Tools</a>
       <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-      <a href="ctf.html">CTF</a>
+      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
       <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-icon-github" href="#" aria-label="GitHub" target="_blank" rel="noopener"></a>
-      <a class="nav-icon-linkedin" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a class="nav-icon-github" href="https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io" aria-label="GitHub" target="_blank" rel="noopener"></a>
+      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
       <div class="lang-switch" role="group" aria-label="Ganti bahasa">
         <button class="lang-opt active" data-lang="id" type="button">ID</button>
         <button class="lang-opt" data-lang="en" type="button">EN</button>
@@ -40,44 +39,41 @@
     </div>
   </div>
   <div class="mobile-menu">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html" class="active" data-id="Home" data-en="Home">Home</a>
     <a href="about.html" data-id="About" data-en="About">About</a>
     <a href="skills.html" data-id="Skills" data-en="Skills">Skills</a>
-    <a href="tools.html" data-id="Tools" data-en="Tools">Tools</a>
     <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-    <a href="ctf.html">CTF</a>
+    <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
     <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
     <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
   </div>
 </header>
 
 <section class="hero">
-  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="hero-eyebrow">FILE NO. 001 · CYBERSECURITY PORTFOLIO // DIGITAL IDENTITY</div>
+    <div class="hero-eyebrow" data-id="Portofolio Cybersecurity" data-en="Cybersecurity Portfolio">Portofolio Cybersecurity</div>
     <h1>
-      <span data-id="STAY CURIOUS." data-en="STAY CURIOUS.">STAY CURIOUS.</span><br>
-      <span class="accent" data-id="STAY SECURE." data-en="STAY SECURE.">STAY SECURE.</span>
+      <span data-id="Belajar cybersecurity," data-en="Learning cybersecurity,">Belajar cybersecurity,</span><br>
+      <span class="accent" data-id="satu fundamental pada satu waktu." data-en="one fundamental at a time.">satu fundamental pada satu waktu.</span>
     </h1>
-    <p class="role-line"><span class="status-dot">●</span> <span data-id="Cybersecurity Enthusiast — belajar ethical hacking dari nol" data-en="Cybersecurity Enthusiast — learning ethical hacking from scratch">Cybersecurity Enthusiast — belajar ethical hacking dari nol</span></p>
+    <p class="role-line" id="heroRole"></p>
+    <div class="focus-tags" id="heroFocusTags"></div>
 
     <div class="terminal-window">
-      <div class="terminal-titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="glitch" data-text="root@portfolio:~">root@portfolio:~</span></div>
+      <div class="terminal-titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="ttitle">root@portfolio:~</span></div>
       <div class="terminal-body">
         <div class="line"><span class="prompt-user">$</span> whoami</div>
         <div class="line out">fatonkamal035</div>
-        <div class="line out" data-id="Cybersecurity Enthusiast | Ethical Hacker in training" data-en="Cybersecurity Enthusiast | Ethical Hacker in training">Cybersecurity Enthusiast | Ethical Hacker in training</div>
+        <div class="line out" data-id="Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka & terdokumentasi" data-en="Aspiring Cybersecurity Professional — still early stage, learning openly & documenting progress">Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka &amp; terdokumentasi</div>
         <div class="line"><span class="prompt-user">$</span> status</div>
-        <div class="line ok">[ONLINE] SECURITY MODE ACTIVE</div>
-        <div class="line"><span class="prompt-user">$</span> ./start_portfolio.sh</div>
-        <div class="line progress-bar-ascii">████████████████████████████ 100%</div>
-        <div class="line ok">&gt; ACCESS GRANTED<span class="cursor-block"></span></div>
+        <div class="line ok">● ONLINE<span class="cursor-block"></span></div>
       </div>
     </div>
 
     <div class="btn-row" style="margin-top:1.8rem;">
-      <a class="btn primary" href="skills.html" data-id="Lihat Skills" data-en="View Skills">Lihat Skills</a>
-      <a class="btn ghost" href="contact.html" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</a>
+      <a class="btn primary" href="projects.html" data-id="Lihat Project" data-en="View Projects">Lihat Project</a>
+      <a class="btn ghost" href="writeups.html" data-id="Baca Write-ups" data-en="Read Write-ups">Baca Write-ups</a>
     </div>
   </div>
 </section>
@@ -127,19 +123,19 @@
     <div class="card-grid reveal">
       <a class="tool-card" href="skills.html" style="color:inherit;">
         <div class="t-cat">01</div><h3 data-id="Skills" data-en="Skills">Skills</h3>
-        <p data-id="Skill matrix & progres belajar" data-en="Skill matrix & learning progress">Skill matrix & progres belajar</p>
-      </a>
-      <a class="tool-card" href="tools.html" style="color:inherit;">
-        <div class="t-cat">02</div><h3 data-id="Toolkit" data-en="Toolkit">Toolkit</h3>
-        <p data-id="Tools yang sedang dipelajari & dipakai" data-en="Tools currently being learned & used">Tools yang sedang dipelajari & dipakai</p>
-      </a>
-      <a class="tool-card" href="ctf.html" style="color:inherit;">
-        <div class="t-cat">03</div><h3>CTF &amp; Training</h3>
-        <p data-id="Statistik TryHackMe & Hack The Box" data-en="TryHackMe & Hack The Box stats">Statistik TryHackMe & Hack The Box</p>
+        <p data-id="Skill checkpoint, toolkit & progres belajar" data-en="Skill checkpoints, toolkit & learning progress">Skill checkpoint, toolkit & progres belajar</p>
       </a>
       <a class="tool-card" href="projects.html" style="color:inherit;">
-        <div class="t-cat">04</div><h3 data-id="Projects" data-en="Projects">Projects</h3>
-        <p data-id="Operasi & project yang sedang dikerjakan" data-en="Operations & projects in progress">Operasi & project yang sedang dikerjakan</p>
+        <div class="t-cat">02</div><h3 data-id="Projects" data-en="Projects">Projects</h3>
+        <p data-id="Project nyata yang sedang dikerjakan" data-en="Real projects currently in progress">Project nyata yang sedang dikerjakan</p>
+      </a>
+      <a class="tool-card" href="writeups.html" style="color:inherit;">
+        <div class="t-cat">03</div><h3 data-id="Write-ups" data-en="Write-ups">Write-ups</h3>
+        <p data-id="Dokumentasi teknis & learning journey TryHackMe/HTB" data-en="Technical documentation & TryHackMe/HTB learning journey">Dokumentasi teknis & learning journey TryHackMe/HTB</p>
+      </a>
+      <a class="tool-card" href="certifications.html" style="color:inherit;">
+        <div class="t-cat">04</div><h3 data-id="Certifications" data-en="Certifications">Certifications</h3>
+        <p data-id="Sertifikasi resmi (akan terisi begitu diperoleh)" data-en="Official certifications (fills in once earned)">Sertifikasi resmi (akan terisi begitu diperoleh)</p>
       </a>
     </div>
   </div>
@@ -154,7 +150,7 @@
     <nav class="footer-nav">
       <a href="index.html" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
-      <a href="ctf.html">CTF</a>
+      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
     <div id="footerSocials" style="display:flex;gap:10px;"></div>
