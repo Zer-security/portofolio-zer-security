@@ -4,19 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skills — Fathon Kamal</title>
-<meta name="description" content="Skill checkpoint, toolkit, dan skill matrix TryHackMe Fathon Kamal — jaringan, Linux, Nmap, Wireshark.">
+<meta name="description" content="Skill checkpoint, toolkit, dan progres belajar cybersecurity Fathon Kamal — level jujur dengan bukti nyata, bukan persentase karangan.">
 <meta property="og:title" content="Skills — Fathon Kamal">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .level-badge{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.06em; padding:3px 10px; border-radius:20px; text-transform:uppercase; border:1px solid var(--accent); color:var(--accent); background:var(--accent-dim); }
+  .evidence-link{ display:inline-block; margin-top:10px; font-family:var(--mono); font-size:0.8rem; }
+</style>
 </head>
 <body>
 
 <header class="topnav">
   <div class="wrap">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Fathon Kamal logo"><span class="brand-name">fatonkamal_</span><span class="alias"></span></a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Logo"><span class="glitch" data-text="fatonkamal_">fatonkamal_</span><span class="alias"></span></a>
     <nav class="navlinks">
       <a href="index.html" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
@@ -27,8 +31,8 @@
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-icon-github" href="https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io" aria-label="GitHub" target="_blank" rel="noopener"></a>
-      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a class="nav-icon-github" href="https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8.5 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><path d="M8 11v6M12.5 11v6M12.5 13.5c0-1.6 1.2-2.5 2.5-2.5s2.5 .9 2.5 2.5V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <div class="lang-switch" role="group" aria-label="Ganti bahasa">
         <button class="lang-opt active" data-lang="id" type="button">ID</button>
         <button class="lang-opt" data-lang="en" type="button">EN</button>
@@ -39,7 +43,7 @@
   <div class="mobile-menu">
     <a href="index.html" data-id="Home" data-en="Home">Home</a>
     <a href="about.html" data-id="About" data-en="About">About</a>
-    <a href="skills.html" class="active" data-id="Skills" data-en="Skills">Skills</a>
+    <a href="skills.html" class="active">Skills</a>
     <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
     <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
     <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
@@ -49,9 +53,9 @@
 
 <div class="page-header">
   <div class="wrap">
-    <div class="file-no">FILE NO. 003 · SKILLS</div>
+    <div class="file-no">FILE NO. 003 · SKILL MATRIX</div>
     <h1><span class="prompt">&gt;</span> Skills</h1>
-    <p data-id="Kemampuan yang sedang diasah, ditampilkan apa adanya — bukan angka karangan." data-en="Skills currently being developed, shown as they are — not invented numbers.">Kemampuan yang sedang diasah, ditampilkan apa adanya — bukan angka karangan.</p>
+    <p data-id="Level checkpoint jujur dengan bukti nyata — bukan persentase karangan." data-en="Honest level checkpoints with real evidence — not invented percentages.">Level checkpoint jujur dengan bukti nyata — bukan persentase karangan.</p>
   </div>
 </div>
 
@@ -60,27 +64,41 @@
     <div class="section-head reveal">
       <div class="eyebrow" data-id="Progres" data-en="Progress">Progres</div>
       <h2 data-id="Checkpoint Belajar" data-en="Learning Checkpoints">Checkpoint Belajar</h2>
-      <p data-id="Level di bawah ini adalah checkpoint jujur berdasarkan aktivitas nyata — room yang diselesaikan, jam praktik — bukan skor ujian atau angka karangan. Beberapa terhubung langsung ke write-up sebagai bukti." data-en="The levels below are honest checkpoints based on real activity — rooms completed, practice hours — not exam scores or invented numbers. Some link directly to a write-up as evidence.">Level di bawah ini adalah checkpoint jujur berdasarkan aktivitas nyata — room yang diselesaikan, jam praktik — bukan skor ujian atau angka karangan. Beberapa terhubung langsung ke write-up sebagai bukti.</p>
+      <p data-id="Level di bawah bukan angka ujian — tiap level ditautkan ke bukti nyata (write-up atau room yang sudah diselesaikan)." data-en="The levels below aren't exam scores — each one links to real evidence (a write-up or completed room).">Level di bawah bukan angka ujian — tiap level ditautkan ke bukti nyata (write-up atau room yang sudah diselesaikan).</p>
     </div>
-    <div class="skill-groups" id="skillsGrid"></div>
-  </div>
-</section>
-
-<section class="section" id="toolkit">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-id="Toolkit" data-en="Toolkit">Toolkit</div>
-      <h2 data-id="Tools & Platform" data-en="Tools & Platforms">Tools & Platform</h2>
-      <p data-id="Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini." data-en="Only tools that have actually been used or are currently being learned are listed here.">Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini.</p>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <div class="name-row"><span class="name" data-id="Jaringan Dasar" data-en="Networking Fundamentals">Jaringan Dasar</span><span class="level-badge" data-id="Foundational" data-en="Foundational">Foundational</span></div>
+        <p class="note" data-id="TCP/IP, subnetting, model OSI" data-en="TCP/IP, subnetting, OSI model">TCP/IP, subnetting, model OSI</p>
+        <a class="evidence-link" href="https://tryhackme.com/p/fatonkamal035" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
+      </div>
+      <div class="skill-card">
+        <div class="name-row"><span class="name">Linux &amp; Kali Linux</span><span class="level-badge" data-id="Foundational" data-en="Foundational">Foundational</span></div>
+        <p class="note" data-id="Instalasi selesai, aktif latihan CLI (sudo, root)" data-en="Installation complete, actively practicing the CLI (sudo, root)">Instalasi selesai, aktif latihan CLI (sudo, root)</p>
+        <a class="evidence-link" href="writeups.html" data-id="Bukti: write-up Linux Fundamentals →" data-en="Evidence: Linux Fundamentals write-up →">Bukti: write-up Linux Fundamentals →</a>
+      </div>
+      <div class="skill-card">
+        <div class="name-row"><span class="name">Nmap</span><span class="level-badge" data-id="Learning" data-en="Learning">Learning</span></div>
+        <p class="note" data-id="Menyelesaikan room Nmap Live Host Discovery" data-en="Completed the Nmap Live Host Discovery room">Menyelesaikan room Nmap Live Host Discovery</p>
+        <a class="evidence-link" href="writeups.html" data-id="Bukti: write-up Nmap →" data-en="Evidence: Nmap write-up →">Bukti: write-up Nmap →</a>
+      </div>
+      <div class="skill-card">
+        <div class="name-row"><span class="name">Hydra</span><span class="level-badge" data-id="Learning" data-en="Learning">Learning</span></div>
+        <p class="note" data-id="Menyelesaikan room dasar Hydra untuk brute-force credential" data-en="Completed the basic Hydra room for credential brute-forcing">Menyelesaikan room dasar Hydra untuk brute-force credential</p>
+        <a class="evidence-link" href="https://tryhackme.com/p/fatonkamal035" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
+      </div>
+      <div class="skill-card">
+        <div class="name-row"><span class="name" data-id="Riset Mandiri (NotebookLM)" data-en="Independent Research (NotebookLM)">Riset Mandiri (NotebookLM)</span><span class="level-badge" data-id="Comfortable" data-en="Comfortable">Comfortable</span></div>
+        <p class="note" data-id="Terbiasa riset materi belajar pakai NotebookLM" data-en="Comfortable researching material using NotebookLM">Terbiasa riset materi belajar pakai NotebookLM</p>
+      </div>
     </div>
-    <div class="card-grid reveal" id="toolsGrid"></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-id="TryHackMe" data-en="TryHackMe">TryHackMe</div>
+      <div class="eyebrow">TryHackMe</div>
       <h2 data-id="Skill Matrix Resmi" data-en="Official Skill Matrix">Skill Matrix Resmi</h2>
       <p id="skillMatrixNote"></p>
     </div>
@@ -88,9 +106,16 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="toolkit">
   <div class="wrap">
     <div class="section-head reveal">
+      <div class="eyebrow">Toolkit</div>
+      <h2 data-id="Tools & Platform" data-en="Tools & Platforms">Tools &amp; Platform</h2>
+      <p data-id="Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini." data-en="Only tools that have actually been used or are currently being learned are listed here.">Hanya tools yang benar-benar sudah dipakai atau sedang dipelajari yang ditampilkan di sini.</p>
+    </div>
+    <div class="card-grid reveal" id="toolsGrid"></div>
+
+    <div class="section-head reveal" style="margin-top:2.2rem;">
       <div class="eyebrow" data-id="Privasi" data-en="Privacy">Privasi</div>
       <h2 data-id="Privacy & Anonymity" data-en="Privacy & Anonymity">Privacy &amp; Anonymity</h2>
       <p data-id="Memahami privasi digital — termasuk konsep onion routing seperti pada Tor — adalah bagian dari kesadaran keamanan yang sedang dipelajari, bukan klaim penguasaan tool ini." data-en="Understanding digital privacy — including onion-routing concepts like Tor — is part of the security awareness currently being learned, not a claim of mastering this tool.">Memahami privasi digital — termasuk konsep onion routing seperti pada Tor — adalah bagian dari kesadaran keamanan yang sedang dipelajari, bukan klaim penguasaan tool ini.</p>
