@@ -1,53 +1,78 @@
-# Halo, saya Fathon Kamal (fatonkamal035) 👋
+# 👋 Hi, I'm Fathon Kamal
 
-Aspiring Cybersecurity Professional — belajar cybersecurity dari nol lewat roadmap terstruktur: networking, Linux, dan security fundamentals. Setiap progres didokumentasikan secara terbuka, bukan sekadar diklaim.
+**Aspiring Cybersecurity Professional** — learning networking, Linux, and offensive security fundamentals one step at a time, and documenting the whole journey in the open.
 
-**🌐 Portfolio:** [fatonkamal035-cybersecurity.github.io](https://fatonkamal035-cybersecurity.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-fatonkamal035--cybersecurity.github.io-4fb6a6?style=flat-square)](https://fatonkamal035-cybersecurity.github.io)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-fatonkamal035-212C42?style=flat-square)](https://tryhackme.com/p/fatonkamal035)
+[![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-Profile-9fef00?style=flat-square)](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=flat-square)](https://www.linkedin.com/in/fathon-r-97636842a/)
 
 ---
 
-## About
+## 🎯 About
 
-Saya masih di tahap awal perjalanan cybersecurity, belajar dari nol lewat roadmap terstruktur: networking, Linux, sampai tools penetration testing dasar. Praktik langsung di Kali Linux, menyelesaikan room di TryHackMe, dan mendokumentasikan semuanya di portofolio ini.
+I'm self-studying cybersecurity with a focus on network security and ethical hacking / penetration testing fundamentals. My current approach is hands-on: practicing directly in Kali Linux, following a structured weekly learning roadmap, and using AI as a mentor for explanations and debugging strategy — not as a shortcut. Every command is still run and understood manually.
 
-## Current Focus
+Everything shown here — skills, progress, and projects — is documented honestly at its current stage. No invented numbers, no overstated claims.
 
-- Networking (TCP/IP, subnetting, OSI)
-- Linux & Kali Linux
-- Security Fundamentals (TryHackMe Cyber Security 101)
-- CTF / Security Labs
-- Technical Write-ups
+## 🛠️ Current Focus
 
-## Projects
+| Area | Status |
+|---|---|
+| Networking (TCP/IP, subnetting, OSI model) | Foundational |
+| Linux & Kali Linux (CLI, permissions) | Foundational |
+| Nmap (network scanning) | Familiar |
+| Metasploit (exploitation framework) | Familiar |
+| John the Ripper (password cracking) | Familiar |
+| Hydra (credential brute-forcing) | Learning |
+| OSINT (theHarvester → Sherlock → Recon-ng/SpiderFoot) | Just started |
 
-| Project | Deskripsi | Link |
-|---|---|---|
-| Portfolio Website Ini | Website multi-halaman data-driven (HTML/CSS/JS murni), dwibahasa ID/EN, terminal CLI interaktif. | Repo ini |
+## 📊 TryHackMe Progress
 
-## Write-ups
+- **Profile:** [tryhackme.com/p/fatonkamal035](https://tryhackme.com/p/fatonkamal035)
+- **Rank:** Top 50%
+- **Level:** 2 — Apprentice
+- **Points:** 448
+- **Current streak:** 4 days
+- **Badges earned:** 3
+- **Rooms completed:** 7
 
-Dokumentasi teknis lengkap ada di [`/notes`](./notes) dan halaman [Write-ups](https://fatonkamal035-cybersecurity.github.io/writeups.html) di website.
+<details>
+<summary>Rooms completed so far</summary>
 
-| Write-up | Platform | Kategori | Difficulty |
+- Linux Fundamentals Part 1
+- Nmap Live Host Discovery
+- Hydra
+- Careers in Cyber
+- Search Skills
+- Defensive Security Intro
+- Offensive Security Intro
+
+</details>
+
+## 📝 Write-ups
+
+Detailed technical write-ups live in [`/notes`](./notes) and on the [Write-ups page](https://fatonkamal035-cybersecurity.github.io/writeups.html) of my portfolio.
+
+| Room | Difficulty | Topic | Notes |
 |---|---|---|---|
-| [Web Fundamentals](./notes/web-fundamentals.md) | TryHackMe | Web Security | Easy |
-| [Linux Fundamentals Part 1](./notes/linux-fundamentals-part-1.md) | TryHackMe | Linux | Easy |
+| Linux Fundamentals Part 1 | Easy | Linux basics | [Link](./notes/linux-fundamentals-part-1.md) |
+| Web Fundamentals | Easy | Web exploitation | [Link](./notes/web-fundamentals.md) |
 
-## Learning Journey
+*(more write-ups are added as new rooms are completed)*
 
-- **TryHackMe** — [@fatonkamal035](https://tryhackme.com/p/fatonkamal035) · Rank Top 50% · Level 2 (Apprentice) · 3 badges · 7 room selesai
-- **Hack The Box** — [profil publik](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd), baru dimulai
+## 🌐 Full Portfolio
 
-## Certifications
+This README is a snapshot — the full picture (interactive skill matrix, projects, certifications, contact form) lives at:
 
-Belum ada — slot ini akan diisi begitu sertifikasi cybersecurity pertama diperoleh.
+**[fatonkamal035-cybersecurity.github.io](https://fatonkamal035-cybersecurity.github.io)**
 
-## Contact
+## 📮 Contact
 
-- 💼 LinkedIn: [fathon-r-97636842a](https://www.linkedin.com/in/fathon-r-97636842a/)
-- 💬 Discord: [Join](https://discord.gg/zxSYjNhP)
-- 📧 Email: fathonkamal045@gmail.com
+- **LinkedIn:** [linkedin.com/in/fathon-r-97636842a](https://www.linkedin.com/in/fathon-r-97636842a/)
+- **Discord:** [discord.gg/juqz5Mrx](https://discord.gg/juqz5Mrx)
+- **Email:** fathonkamal045@gmail.com
 
 ---
 
-*Authenticity > flashy design. Evidence > claims.*
+⭐ This repository documents my cybersecurity learning journey. Feedback and suggestions are always welcome.
