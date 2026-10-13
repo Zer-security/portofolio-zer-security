@@ -28,9 +28,9 @@ const PROFILE = {
     ]
   },
 
-  // TO VERIFY: URL lama dipertahankan sampai pemilik mengonfirmasi URL final.
+  // Confirmed: GitHub portfolio URL points to the current repository.
   links: {
-    github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io",
+    github: "https://github.com/Zer-security/portofolio-zer-security",
     youtube: "https://youtube.com/@gxsmacine_025?si=J67fFeJ-gTtg4mq9",
     tiktok: "https://www.tiktok.com/@fkrr_025?_r=1&_t=ZS-98RF6zHrfpx",
     instagram: "https://www.instagram.com/fkrr_035?igsh=MWtvOXd1YmMxM2FtYg==",
@@ -122,10 +122,10 @@ const PROFILE = {
       learned: { id: "Cara memisahkan data dan tampilan (data-driven rendering), dasar aksesibilitas web, dan pentingnya desain yang jujur — bukan sekadar terlihat keren.", en: "How to separate data from presentation (data-driven rendering), basic web accessibility, and the importance of honest design — not just looking cool." },
       desc: { id: "Website portofolio pribadi bertema cybersecurity, dibangun dengan HTML/CSS/JS murni dan di-hosting di GitHub Pages.", en: "Personal cybersecurity-themed portfolio site, built with vanilla HTML/CSS/JS and hosted on GitHub Pages." },
       status: { id: "Portfolio", en: "Portfolio" },
-      github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io"
+      github: "https://github.com/Zer-security/portofolio-zer-security"
     }
   ],
-  // TO VERIFY: tautan write-up GitHub lama dipertahankan sampai URL final dikonfirmasi.
+  // Confirmed: write-up links point to the notes in the current repository.
   writeups: [
     {
       slug: "web-fundamentals",
@@ -139,7 +139,7 @@ const PROFILE = {
       },
       topics: ["HTTP", "Status Codes", "Cookies", "DNS", "cURL"],
       roomUrl: "https://tryhackme.com/room/webfundamentals",
-      writeupUrl: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io/blob/main/notes/web-fundamentals.md"
+      writeupUrl: "https://github.com/Zer-security/portofolio-zer-security/blob/main/notes/web-fundamentals.md"
     },
     {
       slug: "linux-fundamentals",
@@ -153,7 +153,7 @@ const PROFILE = {
       },
       topics: ["CLI Navigation", "Filesystem", "ls/cd/pwd/cat"],
       roomUrl: "https://tryhackme.com/room/linuxfundamentalspart1",
-      writeupUrl: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io/blob/main/notes/linux-fundamentals-part-1.md"
+      writeupUrl: "https://github.com/Zer-security/portofolio-zer-security/blob/main/notes/linux-fundamentals-part-1.md"
     }
   ],
 
