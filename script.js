@@ -12,6 +12,33 @@ function t(field){
   return field[currentLang] ?? field.id ?? '';
 }
 
+/* Return a canonical HTTP(S) URL or null for any invalid/unsafe value. */
+function getSafeUrl(value){
+  if(typeof value !== 'string' || !value.trim()) return null;
+  try {
+    const parsedUrl = new URL(value);
+    if(parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') return null;
+    return parsedUrl.href;
+  } catch (_error) {
+    return null;
+  }
+}
+
+/* Escape a validated URL before placing it in a quoted HTML attribute. */
+function escapeHtmlAttribute(value){
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function learningReviewNotice(){
+  return currentLang === 'id'
+    ? 'Statistik pembelajaran sedang ditinjau dan akan segera diperbarui.'
+    : 'Learning statistics are being reviewed and will be updated soon.';
+}
+
 /* ---------- ICONS (original generic pictograms) ---------- */
 const ICONS = {
   github: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8.5 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
@@ -97,7 +124,8 @@ function renderWhoami(mountId){
 function renderDashboard(mountId){
   const el = document.getElementById(mountId);
   if(!el) return;
-  el.innerHTML = PROFILE.dashboard.map(d=> `<div class="dash-card"><div class="dlabel">${d.label}</div><div class="dvalue"><span class="pulse-dot"></span>${d.value}</div></div>`).join('');
+  // Dashboard values are descriptive labels, not verified real-time indicators.
+  el.innerHTML = PROFILE.dashboard.map(d=> `<div class="dash-card"><div class="dlabel">${d.label}</div><div class="dvalue">${d.value}</div></div>`).join('');
 }
 
 function renderSkillGroups(mountId){
@@ -145,30 +173,43 @@ function renderTools(mountId){
 function renderProjects(mountId){
   const el = document.getElementById(mountId);
   if(!el) return;
-  el.innerHTML = PROFILE.projects.map(p=> `
+  el.innerHTML = PROFILE.projects.map(p=> {
+    const safeGithubUrl = getSafeUrl(p.github);
+    const githubMarkup = p.github
+      ? (safeGithubUrl
+        ? `<div style="margin-top:10px;"><a class="p-link" href="${escapeHtmlAttribute(safeGithubUrl)}" target="_blank" rel="noopener">GitHub \u2192</a></div>`
+        : `<p class="p-link-text">GitHub repository: To be confirmed</p>`)
+      : '';
+    const hasAdditionalStatus = ['testStatus', 'greenplumIntegration', 'pythonFoundation', 'typescriptImplementation']
+      .some(key => p[key] != null && p[key] !== '');
+    const statusMarkup = hasAdditionalStatus
+      ? `<div class="project-status-details" style="margin-top:10px;">
+          <p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Status proyek' : 'Project status'}:</strong> ${t(p.status) || (currentLang === 'id' ? 'Belum dikonfirmasi' : 'Not confirmed')}</p>
+          ${p.testStatus != null ? `<p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Status pengujian' : 'Test status'}:</strong> ${t(p.testStatus)}</p>` : ''}
+          ${p.greenplumIntegration != null ? `<p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Integrasi Greenplum' : 'Greenplum integration'}:</strong> ${t(p.greenplumIntegration)}</p>` : ''}
+          ${p.pythonFoundation != null ? `<p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Fondasi Python' : 'Python foundation'}:</strong> ${t(p.pythonFoundation)}</p>` : ''}
+          ${p.typescriptImplementation != null ? `<p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Implementasi TypeScript' : 'TypeScript implementation'}:</strong> ${t(p.typescriptImplementation)}</p>` : ''}
+        </div>`
+      : (p.status ? `<span class="status-badge">${t(p.status)}</span>` : '');
+    return `
     <div class="project-card">
       <div class="p-cat">${t(p.category)}</div>
       <span class="status-badge" style="margin-bottom:10px;">${t(p.label)}</span>
       <h3>${t(p.name)}</h3>
-      <p>${t(p.objective || p.desc)}</p>
+      <p>${t(p.objective || p.desc || p.description)}</p>
       ${p.built ? `<p><strong style="color:var(--ink);">${currentLang==='id'?'Dibangun':'Built'}:</strong> ${t(p.built)}</p>` : ''}
       ${p.learned ? `<p><strong style="color:var(--ink);">${currentLang==='id'?'Dipelajari':'Learned'}:</strong> ${t(p.learned)}</p>` : ''}
-      <span class="status-badge">${t(p.status)}</span>
-      ${p.github ? `<div style="margin-top:10px;"><a class="p-link" href="${p.github}" target="_blank" rel="noopener">GitHub \u2192</a></div>` : ''}
-    </div>`).join('');
+      ${statusMarkup}
+      ${githubMarkup}
+    </div>`;
+  }).join('');
 }
 
 function renderWriteups(mountId){
   const el = document.getElementById(mountId);
   if(!el) return;
   const progressNote = document.getElementById('writeupsProgressNote');
-  if(progressNote){
-    const done = PROFILE.writeups.length;
-    const total = PROFILE.ctf.tryhackme.roomsCompleted;
-    progressNote.textContent = currentLang === 'id'
-      ? `${done} dari ${total} room TryHackMe yang sudah diselesaikan sudah didokumentasikan penuh di sini. Sisanya menyusul.`
-      : `${done} of ${total} completed TryHackMe rooms are fully documented here. The rest are coming.`;
-  }
+  if(progressNote) progressNote.textContent = learningReviewNotice();
   el.innerHTML = PROFILE.writeups.map(w=> `
     <div class="writeup-card" id="${w.slug}">
       <div class="w-cat">${w.platform} · ${t(w.category)}</div>
@@ -180,23 +221,27 @@ function renderWriteups(mountId){
 }
 
 function renderLearningJourney(){
-  const th = PROFILE.ctf.tryhackme;
+  const reviewNote = learningReviewNotice();
   const statsEl = document.getElementById('ctfStats');
-  if(statsEl){
-    const stats = [
-      { num: th.rank, lbl:{id:'Rank',en:'Rank'} },
-      { num: 'Lv ' + th.level.split(' ')[0], lbl:{id:'Level',en:'Level'} },
-      { num: th.points, lbl:{id:'Poin',en:'Points'} },
-      { num: th.streak, lbl:{id:'Streak',en:'Streak'} },
-      { num: th.badges, lbl:{id:'Badge',en:'Badges'} },
-      { num: th.roomsCompleted, lbl:{id:'Room Selesai',en:'Rooms Done'} }
-    ];
-    statsEl.innerHTML = stats.map(s=> `<div class="ctf-stat"><div class="num">${s.num}</div><div class="lbl">${t(s.lbl)}</div></div>`).join('');
-  }
   const roomsEl = document.getElementById('ctfRooms');
-  if(roomsEl){
-    roomsEl.innerHTML = th.rooms.map(r=> `<div class="room-item"><span class="rname">${r.name}</span><span class="diff-tag ${r.difficulty.toLowerCase()}">${r.difficulty}</span></div>`).join('');
+
+  // Replace the old claim about verified stats with a neutral review notice.
+  if(statsEl){
+    const section = statsEl.closest('.section');
+    const intro = section ? section.querySelector('.section-head p') : null;
+    if(intro) intro.textContent = reviewNote;
+    statsEl.innerHTML = '';
+    statsEl.style.display = 'none';
   }
+
+  // Keep the original data in PROFILE, but do not render unverified room claims.
+  if(roomsEl){
+    roomsEl.innerHTML = '';
+    roomsEl.style.display = 'none';
+    const roomsHeading = roomsEl.previousElementSibling;
+    if(roomsHeading && roomsHeading.tagName === 'H3') roomsHeading.style.display = 'none';
+  }
+
   const htbEl = document.getElementById('htbNote');
   if(htbEl) htbEl.textContent = t(PROFILE.ctf.hackthebox.note);
 }
