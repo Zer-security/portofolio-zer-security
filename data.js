@@ -13,7 +13,7 @@ const PROFILE = {
     en: "Learning ethical hacking from scratch — one deliberate step every week."
   },
   focus: ["Networking", "Linux", "Security Fundamentals", "CTF / Security Labs", "Technical Write-ups"],
-  status: "ONLINE",
+  status: "Portfolio",
 
   bio: {
     id: [
@@ -28,6 +28,7 @@ const PROFILE = {
     ]
   },
 
+  // TO VERIFY: URL lama dipertahankan sampai pemilik mengonfirmasi URL final.
   links: {
     github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io",
     youtube: "https://youtube.com/@gxsmacine_025?si=J67fFeJ-gTtg4mq9",
@@ -41,14 +42,14 @@ const PROFILE = {
   },
 
   dashboard: [
-    { label: "NETWORK", value: "ONLINE", ok: true },
-    { label: "SECURITY", value: "ACTIVE", ok: true },
-    { label: "LEARNING", value: "ACTIVE", ok: true },
-    { label: "CTF", value: "ACTIVE", ok: true },
-    { label: "ROOMS", value: "7", ok: true },
-    { label: "GITHUB", value: "ONLINE", ok: true }
+    { label: "NETWORK LEARNING", value: "Ongoing", ok: true },
+    { label: "SECURITY LEARNING", value: "Ongoing", ok: true },
+    { label: "LEARNING STATUS", value: "Active", ok: true },
+    { label: "CTF PRACTICE", value: "Ongoing", ok: true },
+    { label: "GITHUB", value: "Repository", ok: true }
   ],
 
+  // TO VERIFY: level dan atribusi sumber TryHackMe belum diperiksa ulang.
   skillMatrix: {
     level: { id: "Foundational", en: "Foundational" },
     note: {
@@ -97,6 +98,22 @@ const PROFILE = {
 
   projects: [
     {
+      id: "mcp-kali",
+      name: "mcp-kali",
+      category: { id: "MCP / Database Security", en: "MCP / Database Security" },
+      label: "Featured Project",
+      // Keep objective for compatibility with the current script.js renderer.
+      objective: "A security-focused Model Context Protocol (MCP) server project exploring controlled database access, authentication, authorization, audit logging, threat modeling, and automated testing. VMware Tanzu Greenplum is the target integration.",
+      description: "A security-focused Model Context Protocol (MCP) server project exploring controlled database access, authentication, authorization, audit logging, threat modeling, and automated testing. VMware Tanzu Greenplum is the target integration.",
+      status: "Security-Focused MCP Server Project in Development",
+      testStatus: "To be verified",
+      greenplumIntegration: "Target integration",
+      pythonFoundation: "To be verified",
+      typescriptImplementation: "In development",
+      // TO VERIFY: repository URL has not been confirmed; renderer must not treat this as a URL.
+      github: "To be confirmed"
+    },
+    {
       name: { id: "Portofolio Website Ini", en: "This Portfolio Website" },
       category: { id: "Web / Personal Branding", en: "Web / Personal Branding" },
       label: { id: "Learning Project", en: "Learning Project" },
@@ -104,11 +121,11 @@ const PROFILE = {
       built: { id: "Website multi-halaman dengan struktur data terpusat (satu file data.js untuk semua konten), dukungan dwibahasa (ID/EN), dan terminal CLI interaktif kecil.", en: "A multi-page site with centralized data (one data.js file driving all content), bilingual support (ID/EN), and a small interactive CLI terminal." },
       learned: { id: "Cara memisahkan data dan tampilan (data-driven rendering), dasar aksesibilitas web, dan pentingnya desain yang jujur — bukan sekadar terlihat keren.", en: "How to separate data from presentation (data-driven rendering), basic web accessibility, and the importance of honest design — not just looking cool." },
       desc: { id: "Website portofolio pribadi bertema cybersecurity, dibangun dengan HTML/CSS/JS murni dan di-hosting di GitHub Pages.", en: "Personal cybersecurity-themed portfolio site, built with vanilla HTML/CSS/JS and hosted on GitHub Pages." },
-      status: { id: "Live", en: "Live" },
+      status: { id: "Portfolio", en: "Portfolio" },
       github: "https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io"
     }
   ],
-
+  // TO VERIFY: tautan write-up GitHub lama dipertahankan sampai URL final dikonfirmasi.
   writeups: [
     {
       slug: "web-fundamentals",
@@ -140,6 +157,8 @@ const PROFILE = {
     }
   ],
 
+  // TO VERIFY: jangan tampilkan statistik/room list sebagai data terkini sebelum diverifikasi.
+  // Data lama dipertahankan sesuai instruksi; renderer perlu menyembunyikan data ini di tahap terpisah.
   ctf: {
     tryhackme: {
       rank: "Top 50%",
@@ -159,6 +178,7 @@ const PROFILE = {
       ]
     },
     hackthebox: {
+      // TO VERIFY: catatan profil HTB dipertahankan; status terkini belum dikonfirmasi.
       note: { id: "Profil aktif — statistik lengkap menyusul setelah menyelesaikan lebih banyak challenge.", en: "Active profile — full stats coming soon after completing more challenges." }
     }
   },
