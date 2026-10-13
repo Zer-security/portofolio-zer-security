@@ -4,22 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fathon Kamal — Aspiring Cybersecurity Professional</title>
-<meta name="description" content="Portofolio cybersecurity Fathon Kamal (fatonkamal035) — belajar networking, Linux, dan security fundamentals lewat TryHackMe & Hack The Box, terdokumentasi lewat write-up teknis.">
+<meta name="description" content="Portofolio cybersecurity Fathon Kamal — belajar networking, Linux, web security, dan pengembangan proyek keamanan melalui latihan yang terdokumentasi.">
 <meta property="og:title" content="Fathon Kamal — Aspiring Cybersecurity Professional">
 <meta property="og:description" content="Portofolio cybersecurity: skills, projects, dan technical write-ups.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <header class="topnav">
   <div class="wrap">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Fathon Kamal logo"><span class="brand-name">fatonkamal_</span><span class="alias"></span></a>
-    <nav class="navlinks">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="logo.png" alt="Fathon Kamal logo">
+      <span class="brand-name">fatonkamal_</span>
+      <span class="alias"></span>
+    </a>
+
+    <nav class="navlinks" aria-label="Main navigation">
       <a href="index.html" class="active" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
       <a href="skills.html" data-id="Skills" data-en="Skills">Skills</a>
@@ -28,16 +34,35 @@
       <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
+
     <div class="nav-right">
-      <a class="nav-icon-github" href="https://github.com/fatonkamal035-Cybersecurity/fatonkamal035-Cybersecurity.github.io" aria-label="GitHub" target="_blank" rel="noopener"></a>
-      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+      <a
+        class="nav-icon-github"
+        href="https://github.com/Zer-security/portofolio-zer-security"
+        aria-label="GitHub portfolio repository"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+
+      <a
+        class="nav-icon-linkedin"
+        href="https://www.linkedin.com/in/fathon-r-97636842a/"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+
       <div class="lang-switch" role="group" aria-label="Ganti bahasa">
         <button class="lang-opt active" data-lang="id" type="button">ID</button>
         <button class="lang-opt" data-lang="en" type="button">EN</button>
       </div>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+      <button class="hamburger" type="button" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+
   <div class="mobile-menu">
     <a href="index.html" class="active" data-id="Home" data-en="Home">Home</a>
     <a href="about.html" data-id="About" data-en="About">About</a>
@@ -49,97 +74,224 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="hero-eyebrow" data-id="Portofolio Cybersecurity" data-en="Cybersecurity Portfolio">Portofolio Cybersecurity</div>
-    <h1>
-      <span data-id="Belajar cybersecurity," data-en="Learning cybersecurity,">Belajar cybersecurity,</span><br>
-      <span class="accent" data-id="satu fundamental pada satu waktu." data-en="one fundamental at a time.">satu fundamental pada satu waktu.</span>
-    </h1>
-    <p class="role-line" id="heroRole"></p>
-    <div class="focus-tags" id="heroFocusTags"></div>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
 
-    <div class="terminal-window">
-      <div class="terminal-titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="ttitle">root@portfolio:~</span></div>
-      <div class="terminal-body">
-        <div class="line"><span class="prompt-user">$</span> whoami</div>
-        <div class="line out">fatonkamal035</div>
-        <div class="line out" data-id="Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka & terdokumentasi" data-en="Aspiring Cybersecurity Professional — still early stage, learning openly & documenting progress">Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka &amp; terdokumentasi</div>
-        <div class="line"><span class="prompt-user">$</span> status</div>
-        <div class="line ok">● ONLINE<span class="cursor-block"></span></div>
+    <div class="wrap">
+      <div class="hero-eyebrow" data-id="Portofolio Cybersecurity" data-en="Cybersecurity Portfolio">
+        Portofolio Cybersecurity
+      </div>
+
+      <h1>
+        <span data-id="Belajar cybersecurity," data-en="Learning cybersecurity,">Belajar cybersecurity,</span>
+        <br>
+        <span class="accent" data-id="satu fundamental pada satu waktu." data-en="one fundamental at a time.">satu fundamental pada satu waktu.</span>
+      </h1>
+
+      <p class="role-line" id="heroRole"></p>
+      <div class="focus-tags" id="heroFocusTags"></div>
+
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="ttitle">portfolio@fatonkamal:~</span>
+        </div>
+
+        <div class="terminal-body">
+          <div class="line"><span class="prompt-user">$</span> whoami</div>
+          <div class="line out">fatonkamal035</div>
+
+          <div class="line out"
+            data-id="Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka dan mendokumentasikan progres"
+            data-en="Aspiring Cybersecurity Professional — learning openly and documenting progress">
+            Aspiring Cybersecurity Professional — masih tahap awal, belajar terbuka dan mendokumentasikan progres
+          </div>
+
+          <div class="line"><span class="prompt-user">$</span> status</div>
+          <div class="line out">Portfolio<span class="cursor-block"></span></div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:1.8rem;">
+        <a class="btn primary" href="#featured-projects" data-id="Lihat Featured Project" data-en="View Featured Project">
+          Lihat Featured Project
+        </a>
+        <a class="btn ghost" href="writeups.html" data-id="Baca Write-ups" data-en="Read Write-ups">
+          Baca Write-ups
+        </a>
       </div>
     </div>
+  </section>
 
-    <div class="btn-row" style="margin-top:1.8rem;">
-      <a class="btn primary" href="projects.html" data-id="Lihat Project" data-en="View Projects">Lihat Project</a>
-      <a class="btn ghost" href="writeups.html" data-id="Baca Write-ups" data-en="Read Write-ups">Baca Write-ups</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">WHOAMI</div>
-      <h2 data-id="Identitas Singkat" data-en="Quick Identity">Identitas Singkat</h2>
-    </div>
-    <div class="whoami-grid" id="whoamiGrid"></div>
-
-    <div class="section-head reveal" style="margin-top:0.5rem;">
-      <div class="eyebrow" data-id="Dashboard" data-en="Dashboard">Dashboard</div>
-      <h2 data-id="System Status" data-en="System Status">System Status</h2>
-    </div>
-    <div class="dash-grid" id="dashGrid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Terminal</div>
-      <h2 data-id="Coba Ketik Sendiri" data-en="Try It Yourself">Coba Ketik Sendiri</h2>
-      <p data-id="Ini terminal simulasi portofolio, bukan akses shell sungguhan. Ketik 'help' untuk mulai." data-en="This is a portfolio simulation terminal, not a real shell. Type 'help' to start.">Ini terminal simulasi portofolio, bukan akses shell sungguhan. Ketik 'help' untuk mulai.</p>
-    </div>
-    <div class="iterm reveal">
-      <div class="iterm-output" id="itermOutput">
-        <div class="line cmd-out" data-id="Selamat datang. Ketik 'help' untuk lihat perintah yang tersedia." data-en="Welcome. Type 'help' to see available commands.">Selamat datang. Ketik 'help' untuk lihat perintah yang tersedia.</div>
+  <!-- FEATURED PROJECTS -->
+  <section class="section" id="featured-projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">FEATURED PROJECTS</div>
+        <h2 data-id="Proyek Pilihan" data-en="Featured Projects">Proyek Pilihan</h2>
+        <p
+          data-id="Proyek dan progres yang didokumentasikan secara terbuka, dengan status yang jelas."
+          data-en="Projects and progress documented openly, with clearly stated status.">
+          Proyek dan progres yang didokumentasikan secara terbuka, dengan status yang jelas.
+        </p>
       </div>
-      <div class="iterm-input-row">
-        <span class="p">guest@fatonkamal035:~$</span>
-        <input id="itermInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+
+      <div class="card-grid reveal">
+        <!-- PROJECT 1: MCP-KALI -->
+        <article class="tool-card" id="featured-mcp-kali" style="border-color:var(--accent);">
+          <div class="t-cat">FEATURED PROJECT · 01</div>
+
+          <h3>mcp-kali — Security-Focused MCP Server Project in Development</h3>
+
+          <p>
+            A security-focused Model Context Protocol (MCP) server project exploring controlled database access,
+            authentication, authorization, audit logging, threat modeling, and automated testing.
+            VMware Tanzu Greenplum is the target integration.
+          </p>
+
+          <div class="project-status-list">
+            <p><strong>Project status:</strong> In Development</p>
+            <p><strong>Test status:</strong> To be verified</p>
+            <p><strong>Greenplum integration:</strong> Target integration</p>
+          </div>
+
+          <div class="btn-row" style="margin-top:1.25rem;">
+            <a class="btn primary" href="projects.html#mcp-kali">View project details</a>
+            <p><strong>GitHub repository:</strong> URL to be confirmed</p>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: PORTFOLIO WEBSITE -->
+        <article class="tool-card" id="portfolio-website">
+          <div class="t-cat">PERSONAL PROJECT · 02</div>
+
+          <h3>This Portfolio Website</h3>
+
+          <p>
+            A personal cybersecurity portfolio built with vanilla HTML, CSS, and JavaScript.
+            It documents learning progress, technical write-ups, skills, and projects in Indonesian and English.
+          </p>
+
+          <p><strong>Project status:</strong> Portfolio</p>
+
+          <div class="btn-row" style="margin-top:1.25rem;">
+            <a class="btn primary" href="about.html" data-id="Tentang Saya" data-en="About Me">Tentang Saya</a>
+            <a
+              class="btn ghost"
+              href="https://github.com/Zer-security/portofolio-zer-security"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub</a>
+          </div>
+        </article>
       </div>
     </div>
-    <p class="iterm-hint" data-id="Coba: whoami · skills · tools · projects · contact · social · clear" data-en="Try: whoami · skills · tools · projects · contact · social · clear">Coba: whoami · skills · tools · projects · contact · social · clear</p>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-id="Jelajahi" data-en="Explore">Jelajahi</div>
-      <h2 data-id="Bagian Lainnya" data-en="More Sections">Bagian Lainnya</h2>
+  <!-- WHOAMI AND DASHBOARD -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">WHOAMI</div>
+        <h2 data-id="Identitas Singkat" data-en="Quick Identity">Identitas Singkat</h2>
+      </div>
+
+      <div class="whoami-grid" id="whoamiGrid"></div>
+
+      <div class="section-head reveal" style="margin-top:0.5rem;">
+        <div class="eyebrow" data-id="Ringkasan" data-en="Overview">Ringkasan</div>
+        <h2 data-id="Learning Snapshot" data-en="Learning Snapshot">Learning Snapshot</h2>
+      </div>
+
+      <!-- Dashboard values are sourced from data.js and must be reviewed before publication. -->
+      <div class="dash-grid" id="dashGrid"></div>
     </div>
-    <div class="card-grid reveal">
-      <a class="tool-card" href="skills.html" style="color:inherit;">
-        <div class="t-cat">01</div><h3 data-id="Skills" data-en="Skills">Skills</h3>
-        <p data-id="Skill checkpoint, toolkit & progres belajar" data-en="Skill checkpoints, toolkit & learning progress">Skill checkpoint, toolkit & progres belajar</p>
-      </a>
-      <a class="tool-card" href="projects.html" style="color:inherit;">
-        <div class="t-cat">02</div><h3 data-id="Projects" data-en="Projects">Projects</h3>
-        <p data-id="Project nyata yang sedang dikerjakan" data-en="Real projects currently in progress">Project nyata yang sedang dikerjakan</p>
-      </a>
-      <a class="tool-card" href="writeups.html" style="color:inherit;">
-        <div class="t-cat">03</div><h3 data-id="Write-ups" data-en="Write-ups">Write-ups</h3>
-        <p data-id="Dokumentasi teknis & learning journey TryHackMe/HTB" data-en="Technical documentation & TryHackMe/HTB learning journey">Dokumentasi teknis & learning journey TryHackMe/HTB</p>
-      </a>
-      <a class="tool-card" href="certifications.html" style="color:inherit;">
-        <div class="t-cat">04</div><h3 data-id="Certifications" data-en="Certifications">Certifications</h3>
-        <p data-id="Sertifikasi resmi (akan terisi begitu diperoleh)" data-en="Official certifications (fills in once earned)">Sertifikasi resmi (akan terisi begitu diperoleh)</p>
-      </a>
+  </section>
+
+  <!-- INTERACTIVE TERMINAL -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Terminal</div>
+        <h2 data-id="Coba Ketik Sendiri" data-en="Try It Yourself">Coba Ketik Sendiri</h2>
+        <p
+          data-id="Ini terminal simulasi portofolio, bukan akses shell sungguhan. Ketik 'help' untuk mulai."
+          data-en="This is a portfolio simulation terminal, not a real shell. Type 'help' to start.">
+          Ini terminal simulasi portofolio, bukan akses shell sungguhan. Ketik 'help' untuk mulai.
+        </p>
+      </div>
+
+      <div class="iterm reveal">
+        <div class="iterm-output" id="itermOutput">
+          <div class="line cmd-out"
+            data-id="Selamat datang. Ketik 'help' untuk lihat perintah yang tersedia."
+            data-en="Welcome. Type 'help' to see available commands.">
+            Selamat datang. Ketik 'help' untuk lihat perintah yang tersedia.
+          </div>
+        </div>
+
+        <div class="iterm-input-row">
+          <span class="p">guest@fatonkamal035:~$</span>
+          <input id="itermInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+        </div>
+      </div>
+
+      <p class="iterm-hint"
+        data-id="Coba: whoami · skills · tools · projects · contact · social · clear"
+        data-en="Try: whoami · skills · tools · projects · contact · social · clear">
+        Coba: whoami · skills · tools · projects · contact · social · clear
+      </p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- OTHER SECTIONS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-id="Jelajahi" data-en="Explore">Jelajahi</div>
+        <h2 data-id="Bagian Lainnya" data-en="More Sections">Bagian Lainnya</h2>
+      </div>
+
+      <div class="card-grid reveal">
+        <a class="tool-card" href="skills.html" style="color:inherit;">
+          <div class="t-cat">01</div>
+          <h3 data-id="Skills" data-en="Skills">Skills</h3>
+          <p data-id="Skill checkpoint, toolkit dan progres belajar" data-en="Skill checkpoints, toolkit and learning progress">
+            Skill checkpoint, toolkit dan progres belajar
+          </p>
+        </a>
+
+        <a class="tool-card" href="projects.html" style="color:inherit;">
+          <div class="t-cat">02</div>
+          <h3 data-id="Projects" data-en="Projects">Projects</h3>
+          <p data-id="Proyek yang sedang dikembangkan dan didokumentasikan" data-en="Projects in development and documentation">
+            Proyek yang sedang dikembangkan dan didokumentasikan
+          </p>
+        </a>
+
+        <a class="tool-card" href="writeups.html" style="color:inherit;">
+          <div class="t-cat">03</div>
+          <h3 data-id="Write-ups" data-en="Write-ups">Write-ups</h3>
+          <p data-id="Dokumentasi teknis dan perjalanan belajar TryHackMe/HTB" data-en="Technical documentation and TryHackMe/HTB learning journey">
+            Dokumentasi teknis dan perjalanan belajar TryHackMe/HTB
+          </p>
+        </a>
+
+        <a class="tool-card" href="certifications.html" style="color:inherit;">
+          <div class="t-cat">04</div>
+          <h3 data-id="Certifications" data-en="Certifications">Certifications</h3>
+          <p data-id="Sertifikasi resmi akan dicantumkan setelah diperoleh" data-en="Official certifications will be listed when earned">
+            Sertifikasi resmi akan dicantumkan setelah diperoleh
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
   <div class="wrap">
@@ -147,16 +299,24 @@
       <span style="color:var(--ink);font-weight:600;">Fathon Kamal</span>
       <span data-id="Portofolio Cybersecurity" data-en="Cybersecurity Portfolio">Portofolio Cybersecurity</span>
     </div>
-    <nav class="footer-nav">
+
+    <nav class="footer-nav" aria-label="Footer navigation">
       <a href="index.html" data-id="Home" data-en="Home">Home</a>
       <a href="about.html" data-id="About" data-en="About">About</a>
       <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
       <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
     </nav>
+
     <div id="footerSocials" style="display:flex;gap:10px;"></div>
   </div>
+
   <div class="wrap" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
-    <span>© 2026 Fathon Kamal — <span data-id="dibangun dengan rasa ingin tahu, kode & keamanan." data-en="built with curiosity, code &amp; security.">dibangun dengan rasa ingin tahu, kode &amp; keamanan.</span></span>
+    <span>
+      © 2026 Fathon Kamal —
+      <span data-id="dibangun dengan rasa ingin tahu, kode dan keamanan." data-en="built with curiosity, code and security.">
+        dibangun dengan rasa ingin tahu, kode dan keamanan.
+      </span>
+    </span>
   </div>
 </footer>
 
