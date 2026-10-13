@@ -1,78 +1,82 @@
-# 👋 Hi, I'm Fathon Kamal
+# Fathon Kamal — Cybersecurity Learning Portfolio
 
-**Aspiring Cybersecurity Professional** — learning networking, Linux, and offensive security fundamentals one step at a time, and documenting the whole journey in the open.
+**Aspiring Cybersecurity Professional** focused on networking, Linux, web fundamentals, and practical security learning. This repository contains my portfolio website, learning notes, and selected cybersecurity projects.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-fatonkamal035--cybersecurity.github.io-4fb6a6?style=flat-square)](https://fatonkamal035-cybersecurity.github.io)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-fatonkamal035-212C42?style=flat-square)](https://tryhackme.com/p/fatonkamal035)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-4fb6a6?style=flat-square)](https://zer-security.github.io/portofolio-zer-security/)
+[![GitHub](https://img.shields.io/badge/GitHub-Zer--security-181717?style=flat-square&logo=github)](https://github.com/Zer-security)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Learning-212C42?style=flat-square)](https://tryhackme.com/p/fatonkamal035)
 [![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-Profile-9fef00?style=flat-square)](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=flat-square)](https://www.linkedin.com/in/fathon-r-97636842a/)
 
 ---
 
-## 🎯 About
+## About
 
-I'm self-studying cybersecurity with a focus on network security and ethical hacking / penetration testing fundamentals. My current approach is hands-on: practicing directly in Kali Linux, following a structured weekly learning roadmap, and using AI as a mentor for explanations and debugging strategy — not as a shortcut. Every command is still run and understood manually.
+I am learning cybersecurity through structured study, hands-on practice, and technical documentation. I use Kali Linux to develop my understanding of operating systems, networking, and security tools.
 
-Everything shown here — skills, progress, and projects — is documented honestly at its current stage. No invented numbers, no overstated claims.
+My approach emphasizes understanding commands, checking results, and documenting what has and has not been verified. Skills and project status should reflect actual evidence rather than assumed completion.
 
-## 🛠️ Current Focus
+## Current Learning Areas
 
-| Area | Status |
+| Area | Focus |
 |---|---|
-| Networking (TCP/IP, subnetting, OSI model) | Foundational |
-| Linux & Kali Linux (CLI, permissions) | Foundational |
-| Nmap (network scanning) | Familiar |
-| Metasploit (exploitation framework) | Familiar |
-| John the Ripper (password cracking) | Familiar |
-| Hydra (credential brute-forcing) | Learning |
-| OSINT (theHarvester → Sherlock → Recon-ng/SpiderFoot) | Just started |
+| Networking | TCP/IP, subnetting, OSI model, and network fundamentals |
+| Linux | Command line, files, directories, permissions, and system administration basics |
+| Web fundamentals | HTTP, URLs, web technologies, and security concepts |
+| Security tools | Learning how to use and interpret security-tool output responsibly |
+| Cybersecurity practice | Structured learning, lab exercises, and technical write-ups |
+| Python and automation | Reading, understanding, and validating scripts |
 
-## 📊 TryHackMe Progress
+This table describes learning areas, not professional certifications or mastery claims.
 
-- **Profile:** [tryhackme.com/p/fatonkamal035](https://tryhackme.com/p/fatonkamal035)
-- **Rank:** Top 50%
-- **Level:** 2 — Apprentice
-- **Points:** 448
-- **Current streak:** 4 days
-- **Badges earned:** 3
-- **Rooms completed:** 7
+## Featured Project: Secure MCP Server for Kali Linux
 
-<details>
-<summary>Rooms completed so far</summary>
+**Repository:** [Zer-security/secure-mcp-server](https://github.com/Zer-security/secure-mcp-server)
 
-- Linux Fundamentals Part 1
-- Nmap Live Host Discovery
-- Hydra
-- Careers in Cyber
-- Search Skills
-- Defensive Security Intro
-- Offensive Security Intro
+The project explores a security-focused Model Context Protocol (MCP) server that exposes explicitly registered, read-only tools for a local Kali Linux environment.
 
-</details>
+Design goals include:
 
-## 📝 Write-ups
+- Least privilege and an explicit tool allowlist.
+- Scoped authorization and OAuth 2.0 with PKCE.
+- TLS and transport security protections.
+- Request rate limiting and audit logging.
+- Avoiding generic shell or arbitrary-code execution endpoints.
 
-Detailed technical write-ups live in [`/notes`](./notes) and on the [Write-ups page](https://fatonkamal035-cybersecurity.github.io/writeups.html) of my portfolio.
+**Status:** Development and verification are ongoing. The design goals above do not, by themselves, establish production readiness. Refer to the project repository, tests, and current documentation for implementation details and verification status.
 
-| Room | Difficulty | Topic | Notes |
-|---|---|---|---|
-| Linux Fundamentals Part 1 | Easy | Linux basics | [Link](./notes/linux-fundamentals-part-1.md) |
-| Web Fundamentals | Easy | Web exploitation | [Link](./notes/web-fundamentals.md) |
+**Portfolio documentation:** [MCP-Kali project page](https://zer-security.github.io/portofolio-zer-security/projects.html#mcp-kali)
 
-*(more write-ups are added as new rooms are completed)*
+## Learning Notes and Write-ups
 
-## 🌐 Full Portfolio
+Technical notes are maintained in [`/notes`](./notes).
 
-This README is a snapshot — the full picture (interactive skill matrix, projects, certifications, contact form) lives at:
+| Topic | Notes |
+|---|---|
+| Linux Fundamentals Part 1 | [Read the notes](./notes/linux-fundamentals-part-1.md) |
+| Web Fundamentals | [Read the notes](./notes/web-fundamentals.md) |
 
-**[fatonkamal035-cybersecurity.github.io](https://fatonkamal035-cybersecurity.github.io)**
+These notes document learning and practice. They should not be interpreted as proof of professional experience or authorization to test systems.
 
-## 📮 Contact
+## Portfolio Website
 
-- **LinkedIn:** [linkedin.com/in/fathon-r-97636842a](https://www.linkedin.com/in/fathon-r-97636842a/)
-- **Discord:** [discord.gg/juqz5Mrx](https://discord.gg/juqz5Mrx)
-- **Email:** fathonkamal045@gmail.com
+The portfolio website presents selected projects, skills, write-ups, and other learning information.
+
+**Website:** [https://zer-security.github.io/portofolio-zer-security/](https://zer-security.github.io/portofolio-zer-security/)
+
+**Source repository:** [https://github.com/Zer-security/portofolio-zer-security](https://github.com/Zer-security/portofolio-zer-security)
+
+## Learning Profiles
+
+- [TryHackMe](https://tryhackme.com/p/fatonkamal035)
+- [Hack The Box](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
+- [GitHub — Zer-security](https://github.com/Zer-security)
+
+Live profile statistics are intentionally not duplicated here because they may change over time. Visit the platforms for their current information.
+
+## Contact
+
+For professional or project-related contact, visit my [LinkedIn profile](https://www.linkedin.com/in/fathon-r-97636842a/).
 
 ---
 
-⭐ This repository documents my cybersecurity learning journey. Feedback and suggestions are always welcome.
+This repository documents an ongoing cybersecurity learning journey. Project claims and progress should be evaluated against the available source code, documentation, and verification evidence.
