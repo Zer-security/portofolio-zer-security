@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+k<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -61,7 +61,12 @@
       <div class="eyebrow" data-id="Portofolio" data-en="Portfolio">Portofolio</div>
       <h2 data-id="Daftar Project" data-en="Project List">Daftar Project</h2>
     </div>
-    <div class="card-grid reveal" id="projectsGrid"></div>
+    <!-- The renderer uses PROFILE.projects order; mcp-kali is first in data.js.
+         Keep this anchor wrapper outside the render mount so renderProjects()
+         cannot overwrite the anchor when the language is changed. -->
+    <article id="mcp-kali">
+      <div class="card-grid reveal" id="projectsGrid"></div>
+    </article>
   </div>
 </section>
 
@@ -80,7 +85,7 @@
     <div id="footerSocials" style="display:flex;gap:10px;"></div>
   </div>
   <div class="wrap" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
-    <span>© 2026 Fathon Kamal — <span data-id="dibangun dengan rasa ingin tahu, kode & keamanan." data-en="built with curiosity, code &amp; security.">dibangun dengan rasa ingin tahu, kode &amp; keamanan.</span></span>
+    <span>© 2026 Fathon Kamal — <span data-id="dibangun dengan rasa ingin tahu, kode & keamanan." data-en="built with curiosity, code &amp; security.">dibangun dengan rasa ingin tahu, kode & keamanan.</span></span>
   </div>
 </footer>
 
