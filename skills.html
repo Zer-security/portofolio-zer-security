@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills — Fathon Kamal</title>
-<meta name="description" content="Skill checkpoint, toolkit, dan progres belajar cybersecurity Fathon Kamal — level jujur dengan bukti nyata, bukan persentase karangan.">
-<meta property="og:title" content="Skills — Fathon Kamal">
+<title>Learning | Zer-security</title>
+<meta name="description" content="Cybersecurity learning areas, practical notes, and current skills in progress.">
+<meta property="og:title" content="Learning | Zer-security">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   .level-badge{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.06em; padding:3px 10px; border-radius:20px; text-transform:uppercase; border:1px solid var(--accent); color:var(--accent); background:var(--accent-dim); }
@@ -20,42 +21,38 @@
 
 <header class="topnav">
   <div class="wrap">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Logo"><span class="glitch" data-text="fatonkamal_">fatonkamal_</span><span class="alias"></span></a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.png" alt="Logo"><span class="glitch" data-text="Zer-security">Zer-security</span><span class="alias"></span></a>
     <nav class="navlinks">
-      <a href="index.html" data-id="Home" data-en="Home">Home</a>
-      <a href="about.html" data-id="About" data-en="About">About</a>
-      <a href="skills.html" class="active" data-id="Skills" data-en="Skills">Skills</a>
-      <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
-      <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
-      <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html" class="active">Learning</a>
+      <a href="projects.html">Projects</a>
+      <a href="writeups.html">Notes</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-icon-github" href="https://github.com/Zer-security/portofolio-zer-security" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8.5 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
-      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><path d="M8 11v6M12.5 11v6M12.5 13.5c0-1.6 1.2-2.5 2.5-2.5s2.5 .9 2.5 2.5V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="lang-switch" role="group" aria-label="Ganti bahasa">
-        <button class="lang-opt active" data-lang="id" type="button">ID</button>
-        <button class="lang-opt" data-lang="en" type="button">EN</button>
-      </div>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a class="nav-icon-github" href="https://github.com/Zer-security" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8.5 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <a class="nav-icon-linkedin" href="https://www.linkedin.com/in/fathon-r-97636842a?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><path d="M8 11v6M12.5 11v6M12.5 13.5c0-1.6 1.2-2.5 2.5-2.5s2.5 .9 2.5 2.5V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="mobile-menu">
-    <a href="index.html" data-id="Home" data-en="Home">Home</a>
-    <a href="about.html" data-id="About" data-en="About">About</a>
-    <a href="skills.html" class="active">Skills</a>
-    <a href="projects.html" data-id="Projects" data-en="Projects">Projects</a>
-    <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
-    <a href="certifications.html" data-id="Certifications" data-en="Certifications">Certifications</a>
-    <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html" class="active">Learning</a>
+    <a href="projects.html">Projects</a>
+    <a href="writeups.html">Notes</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
   </div>
 </header>
 
 <div class="page-header">
   <div class="wrap">
-    <div class="file-no">FILE NO. 003 · SKILL MATRIX</div>
-    <h1><span class="prompt">&gt;</span> Skills</h1>
-    <p data-id="Level checkpoint jujur dengan bukti nyata — bukan persentase karangan." data-en="Honest level checkpoints with real evidence — not invented percentages.">Level checkpoint jujur dengan bukti nyata — bukan persentase karangan.</p>
+    <div class="file-no" data-id="PEMBELAJARAN" data-en="LEARNING">PEMBELAJARAN</div>
+    <h1 data-id="Yang Sedang Dipelajari" data-en="What I’m Learning">Yang Sedang Dipelajari</h1>
+    <p data-id="Area yang sedang saya pelajari, dengan status dan catatan yang disesuaikan dengan bukti yang tersedia." data-en="Areas I am studying, with status and notes grounded in the available evidence.">Area yang sedang saya pelajari, dengan status dan catatan yang disesuaikan dengan bukti yang tersedia.</p>
   </div>
 </div>
 
@@ -70,7 +67,7 @@
       <div class="skill-card">
         <div class="name-row"><span class="name" data-id="Jaringan Dasar" data-en="Networking Fundamentals">Jaringan Dasar</span><span class="level-badge" data-id="Foundational" data-en="Foundational">Foundational</span></div>
         <p class="note" data-id="TCP/IP, subnetting, model OSI" data-en="TCP/IP, subnetting, OSI model">TCP/IP, subnetting, model OSI</p>
-        <a class="evidence-link" href="https://tryhackme.com/p/fatonkamal035" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
+        <a class="evidence-link" href="https://tryhackme.com/p/Zersecurity" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
       </div>
       <div class="skill-card">
         <div class="name-row"><span class="name">Linux &amp; Kali Linux</span><span class="level-badge" data-id="Foundational" data-en="Foundational">Foundational</span></div>
@@ -85,7 +82,7 @@
       <div class="skill-card">
         <div class="name-row"><span class="name">Hydra</span><span class="level-badge" data-id="Learning" data-en="Learning">Learning</span></div>
         <p class="note" data-id="Menyelesaikan room dasar Hydra untuk brute-force credential" data-en="Completed the basic Hydra room for credential brute-forcing">Menyelesaikan room dasar Hydra untuk brute-force credential</p>
-        <a class="evidence-link" href="https://tryhackme.com/p/fatonkamal035" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
+        <a class="evidence-link" href="https://tryhackme.com/p/Zersecurity" target="_blank" rel="noopener" data-id="Bukti: profil TryHackMe →" data-en="Evidence: TryHackMe profile →">Bukti: profil TryHackMe →</a>
       </div>
       <div class="skill-card">
         <div class="name-row"><span class="name" data-id="Riset Mandiri (NotebookLM)" data-en="Independent Research (NotebookLM)">Riset Mandiri (NotebookLM)</span><span class="level-badge" data-id="Comfortable" data-en="Comfortable">Comfortable</span></div>
@@ -127,19 +124,19 @@
 <footer>
   <div class="wrap">
     <div class="footer-left">
-      <span style="color:var(--ink);font-weight:600;">Fathon Kamal</span>
+      <span style="color:var(--ink);font-weight:600;">Zer-security</span>
       <span data-id="Portofolio Cybersecurity" data-en="Cybersecurity Portfolio">Portofolio Cybersecurity</span>
     </div>
     <nav class="footer-nav">
-      <a href="index.html" data-id="Home" data-en="Home">Home</a>
-      <a href="about.html" data-id="About" data-en="About">About</a>
-      <a href="writeups.html" data-id="Write-ups" data-en="Write-ups">Write-ups</a>
-      <a href="contact.html" data-id="Contact" data-en="Contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="writeups.html">Notes</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div id="footerSocials" style="display:flex;gap:10px;"></div>
   </div>
   <div class="wrap" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
-    <span>© 2026 Fathon Kamal — <span data-id="dibangun dengan rasa ingin tahu, kode & keamanan." data-en="built with curiosity, code &amp; security.">dibangun dengan rasa ingin tahu, kode &amp; keamanan.</span></span>
+    <span>© 2026 Zer-security — <span data-id="dibangun dengan rasa ingin tahu, kode & keamanan." data-en="built with curiosity, code &amp; security.">dibangun dengan rasa ingin tahu, kode &amp; keamanan.</span></span>
   </div>
 </footer>
 

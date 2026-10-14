@@ -1,11 +1,11 @@
-# Fathon Kamal — Cybersecurity Learning Portfolio
+# Zer-security — Cybersecurity Portfolio
 
 **Aspiring Cybersecurity Professional** focused on networking, Linux, web fundamentals, and practical security learning. This repository contains my portfolio website, learning notes, and selected cybersecurity projects.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-4fb6a6?style=flat-square)](https://zer-security.github.io/portofolio-zer-security/)
 [![GitHub](https://img.shields.io/badge/GitHub-Zer--security-181717?style=flat-square&logo=github)](https://github.com/Zer-security)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Learning-212C42?style=flat-square)](https://tryhackme.com/p/fatonkamal035)
-[![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-Profile-9fef00?style=flat-square)](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Learning-212C42?style=flat-square)](https://tryhackme.com/p/Zersecurity)
+[![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-Profile-9fef00?style=flat-square)](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd?utm_medium=copy_url)
 
 ---
 
@@ -46,6 +46,14 @@ Design goals include:
 
 **Portfolio documentation:** [MCP-Kali project page](https://zer-security.github.io/portofolio-zer-security/projects.html#mcp-kali)
 
+## Repositories
+
+- [secure-mcp-server](https://github.com/Zer-security/secure-mcp-server) — read-only MCP tools and security controls for Kali Linux.
+- [zer-os](https://github.com/Zer-security/zer-os) — custom Linux operating-system project.
+- [Linux-Kernel](https://github.com/Zer-security/Linux-Kernel) — forked Linux kernel foundation for custom OS development.
+- [security-tools](https://github.com/Zer-security/security-tools) — Python utilities for network inspection, DNS/OSINT, web security, and defensive research.
+- [portofolio-zer-security](https://github.com/Zer-security/portofolio-zer-security) — website source code.
+
 ## Learning Notes and Write-ups
 
 Technical notes are maintained in [`/notes`](./notes).
@@ -67,8 +75,8 @@ The portfolio website presents selected projects, skills, write-ups, and other l
 
 ## Learning Profiles
 
-- [TryHackMe](https://tryhackme.com/p/fatonkamal035)
-- [Hack The Box](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd)
+- [TryHackMe](https://tryhackme.com/p/Zersecurity)
+- [Hack The Box](https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd?utm_medium=copy_url)
 - [GitHub — Zer-security](https://github.com/Zer-security)
 
 Live profile statistics are intentionally not duplicated here because they may change over time. Visit the platforms for their current information.

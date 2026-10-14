@@ -4,7 +4,7 @@
    halaman lewat mount point (id) yang cocok.
    ============================================================ */
 
-let currentLang = 'id';
+let currentLang = 'en';
 
 function t(field){
   if(field == null) return '';
@@ -41,6 +41,7 @@ function learningReviewNotice(){
 
 /* ---------- ICONS (original generic pictograms) ---------- */
 const ICONS = {
+  x: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.2l-4.9-7.4L5.7 22H2.5l7.3-8.4L1.8 2h6.3l4.4 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z" fill="currentColor"/></svg>',
   github: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8.5 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
   youtube: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor" stroke="none"/></svg>',
   tiktok: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V4.5c0-.6.6-1 1.1-.7 1 .6 2.3 1.3 3.9 1.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
@@ -56,15 +57,15 @@ const LINK_META = {
   github: { label: 'GitHub', sub: (v) => v.replace('https://github.com/', 'github.com/') },
   tryhackme: { label: 'TryHackMe', sub: (v) => v.replace('https://', '') },
   hackthebox: { label: 'Hack The Box', sub: () => (currentLang === 'id' ? 'Profil publik' : 'Public profile') },
-  youtube: { label: 'YouTube', sub: () => '@gxsmacine_025' },
-  tiktok: { label: 'TikTok', sub: () => '@fkrr_025' },
-  instagram: { label: 'Instagram', sub: () => '@fkrr_035' },
+  tiktok: { label: 'TikTok', sub: () => '@zer_753_x' },
+  instagram: { label: 'Instagram', sub: () => '@zer_security' },
   discord: { label: 'Discord', sub: () => (currentLang === 'id' ? 'Gabung server' : 'Join server') },
   linkedin: { label: 'LinkedIn', sub: (v) => v.replace('https://www.linkedin.com/in/', 'linkedin.com/in/') },
-  email: { label: 'Email', sub: (v) => v }
+  email: { label: 'Email', sub: (v) => v },
+  x: { label: 'X', sub: () => '@Zerkoth7goc' }
 };
-const CONNECT_ORDER = ['github', 'tryhackme', 'hackthebox', 'youtube', 'tiktok', 'instagram', 'discord', 'linkedin', 'email'];
-const FOOTER_ORDER = ['github', 'youtube', 'tiktok', 'instagram', 'tryhackme', 'hackthebox', 'discord', 'linkedin'];
+const CONNECT_ORDER = ['github', 'tryhackme', 'hackthebox', 'tiktok', 'instagram', 'discord', 'linkedin', 'x'];
+const FOOTER_ORDER = ['github', 'tiktok', 'instagram', 'tryhackme', 'hackthebox', 'discord', 'linkedin', 'x'];
 
 /* ---------- STATIC BILINGUAL TEXT ---------- */
 function applyStaticLang(){
@@ -191,8 +192,11 @@ function renderProjects(mountId){
           ${p.typescriptImplementation != null ? `<p><strong style="color:var(--ink);">${currentLang === 'id' ? 'Implementasi TypeScript' : 'TypeScript implementation'}:</strong> ${t(p.typescriptImplementation)}</p>` : ''}
         </div>`
       : (p.status ? `<span class="status-badge">${t(p.status)}</span>` : '');
+    const cardId = typeof p.id === 'string' && /^[a-z][a-z0-9-]*$/i.test(p.id)
+      ? ` id="${p.id}"`
+      : '';
     return `
-    <div class="project-card">
+    <div class="project-card"${cardId}>
       <div class="p-cat">${t(p.category)}</div>
       <span class="status-badge" style="margin-bottom:10px;">${t(p.label)}</span>
       <h3>${t(p.name)}</h3>
@@ -354,7 +358,7 @@ function initTerminal(){
   }
 
   const helpText = currentLang === 'id'
-    ? 'Perintah tersedia:\n\n  whoami      tampilkan profil\n  skills      tampilkan skill matrix\n  tools       tampilkan toolkit\n  projects    tampilkan project\n  writeups    tampilkan write-up\n  contact     tampilkan info kontak\n  social      tampilkan link sosial\n  clear       bersihkan layar'
+    ? 'Perintah tersedia:\n\n  whoami      show profile\n  skills      show learning areas\n  tools       show tools\n  projects    show projects\n  writeups    show technical notes\n  contact     show contact info\n  social      show social links\n  clear       clear the screen'
     : 'Available commands:\n\n  whoami      show profile\n  skills      show skill matrix\n  tools       show toolkit\n  projects    show projects\n  writeups    show write-ups\n  contact     show contact info\n  social      show social links\n  clear       clear the screen';
 
   const commands = {
@@ -387,7 +391,7 @@ function initTerminal(){
       printLine(commands[cmd](), 'cmd-out');
     } else {
       const msg = currentLang === 'id'
-        ? `command not found: "${raw}" — ketik 'help' untuk daftar perintah`
+        ? `command not found: "${raw}" — type 'help' for available commands`
         : `command not found: "${raw}" — type 'help' for available commands`;
       printLine(msg, 'cmd-out');
     }
@@ -426,3 +430,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   initTerminal();
   initContactForm();
 });
+
+/* ZER-SECURITY PROFESSIONAL FINISH — 2026 */

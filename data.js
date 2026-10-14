@@ -5,40 +5,40 @@
    ============================================================ */
 
 const PROFILE = {
-  name: "Fathon Kamal",
-  alias: "fatonkamal035",
-  role: { id: "Aspiring Cybersecurity Professional", en: "Aspiring Cybersecurity Professional" },
+  name: "Zer-security",
+  alias: "Zerkoth",
+  role: { id: "Pembelajar Cybersecurity", en: "Cybersecurity Learner" },
   tagline: {
-    id: "Belajar ethical hacking dari nol — satu langkah pasti setiap minggu.",
-    en: "Learning ethical hacking from scratch — one deliberate step every week."
+    id: "Belajar Linux, jaringan, dan keamanan web lewat praktik dan catatan yang bisa diperiksa.",
+    en: "Learning Linux, networking, and web security through hands-on practice and verifiable notes."
   },
   focus: ["Networking", "Linux", "Security Fundamentals", "CTF / Security Labs", "Technical Write-ups"],
-  status: "Portfolio",
+  status: "Learning in public",
 
   bio: {
     id: [
-      "Saya masih di tahap awal perjalanan cybersecurity — belajar dari nol lewat roadmap terstruktur, mulai dari dasar jaringan, Linux, sampai tools penetration testing dasar.",
-      "Fokus saat ini: memahami fundamental jaringan dan sistem Linux dengan benar sebelum lompat ke tools yang lebih kompleks. Saya latihan langsung di Kali Linux dan menyelesaikan room-room di TryHackMe sambil mendokumentasikan setiap progres di sini.",
-      "Tujuannya sederhana: konsisten belajar setiap minggu, dan suatu saat bisa berkontribusi nyata di bidang cybersecurity dan ethical hacking."
+      "Saya belajar cybersecurity dari fundamental: jaringan, Linux, dan cara kerja aplikasi web. Saya membuat catatan supaya bisa meninjau kembali apa yang sudah saya pahami dan bagian yang masih membingungkan.",
+      "Di luar latihan lab, saya mengembangkan secure-mcp-server: server MCP untuk Kali Linux yang membatasi akses ke tool baca-saja yang didaftarkan secara eksplisit. Proyek ini membantu saya berlatih tentang autentikasi, kontrol akses, pengujian, dan dokumentasi keamanan.",
+      "Portofolio ini adalah catatan kerja yang terus berkembang, bukan daftar keahlian yang saya anggap sudah dikuasai. Saya membedakan hasil yang sudah diuji dari rencana dan pekerjaan yang belum diverifikasi."
     ],
     en: [
-      "I'm still early in my cybersecurity journey — learning from zero through a structured roadmap, starting from networking fundamentals, Linux, up to basic penetration testing tools.",
-      "Current focus: understanding networking and Linux fundamentals properly before jumping into more complex tools. I practice hands-on in Kali Linux and complete rooms on TryHackMe while documenting the progress here.",
-      "The goal is simple: stay consistent week after week, and eventually make a real contribution in cybersecurity and ethical hacking."
+      "I am learning cybersecurity from the fundamentals: networking, Linux, and how web applications work. I write notes so I can revisit what I understand and what still needs clarification.",
+      "Alongside lab practice, I work on secure-mcp-server: an MCP server for Kali Linux that limits access to explicitly registered read-only tools. The project gives me practice with authentication, access control, testing, and security documentation.",
+      "This portfolio is an evolving work log, not a list of skills I claim to have mastered. I distinguish tested results from plans and work that has not yet been verified."
     ]
   },
 
   // Confirmed: GitHub portfolio URL points to the current repository.
   links: {
-    github: "https://github.com/Zer-security/portofolio-zer-security",
-    youtube: "https://youtube.com/@gxsmacine_025?si=J67fFeJ-gTtg4mq9",
-    tiktok: "https://www.tiktok.com/@fkrr_025?_r=1&_t=ZS-98RF6zHrfpx",
-    instagram: "https://www.instagram.com/fkrr_035?igsh=MWtvOXd1YmMxM2FtYg==",
+    github: "https://github.com/Zer-security",
+    tiktok: "https://www.tiktok.com/@zer_753_x?_r=1&_t=ZS-9AYFaGrs0CD",
+    instagram: "https://instagram.com/zer_security?cplk=MWtvOXd1YmMxM2FtYg%3D%3D",
     email: "fathonkamal045@gmail.com",
-    tryhackme: "https://tryhackme.com/p/fatonkamal035",
-    hackthebox: "https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd",
-    discord: "https://discord.gg/zxSYjNhP",
-    linkedin: "https://www.linkedin.com/in/fathon-r-97636842a/"
+    tryhackme: "https://tryhackme.com/p/Zersecurity",
+    hackthebox: "https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd?utm_medium=copy_url",
+    discord: "https://discord.gg/gCRpQCBS",
+    linkedin: "https://www.linkedin.com/in/fathon-r-97636842a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    x: "https://x.com/Zerkoth7goc",
   },
 
   dashboard: [
@@ -92,26 +92,68 @@ const PROFILE = {
     { name: "Nmap", category: { id: "Jaringan", en: "Network" }, desc: { id: "Network scanning & host discovery.", en: "Network scanning & host discovery." }, url: "https://nmap.org/" },
     { name: "Wireshark", category: { id: "Jaringan", en: "Network" }, desc: { id: "Analisis paket & traffic jaringan.", en: "Packet & network traffic analysis." }, url: "https://www.wireshark.org/" },
     { name: "Hydra", category: { id: "Exploitation", en: "Exploitation" }, desc: { id: "Network logon cracker untuk latihan credential attack.", en: "Network logon cracker for credential attack practice." }, url: "https://github.com/vanhauser-thc/thc-hydra" },
-    { name: "TryHackMe", category: { id: "Platform Latihan", en: "Practice Platform" }, desc: { id: "Platform utama latihan hands-on cybersecurity.", en: "Main hands-on cybersecurity practice platform." }, url: "https://tryhackme.com/p/fatonkamal035" },
-    { name: "Hack The Box", category: { id: "Platform Latihan", en: "Practice Platform" }, desc: { id: "Platform latihan lanjutan, baru dimulai.", en: "Advanced practice platform, just getting started." }, url: "https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd" }
+    { name: "TryHackMe", category: { id: "Platform Latihan", en: "Practice Platform" }, desc: { id: "Platform utama latihan hands-on cybersecurity.", en: "Main hands-on cybersecurity practice platform." }, url: "https://tryhackme.com/p/Zersecurity" },
+    { name: "Hack The Box", category: { id: "Platform Latihan", en: "Practice Platform" }, desc: { id: "Platform latihan lanjutan, baru dimulai.", en: "Advanced practice platform, just getting started." }, url: "https://profile.hackthebox.com/profile/019f945a-256c-727d-b4b6-a1d0f106f0dd?utm_medium=copy_url" }
   ],
 
   projects: [
     {
       id: "mcp-kali",
-      name: "mcp-kali",
-      category: { id: "MCP / Database Security", en: "MCP / Database Security" },
-      label: "Featured Project",
-      // Keep objective for compatibility with the current script.js renderer.
-      objective: "A security-focused Model Context Protocol (MCP) server project exploring controlled database access, authentication, authorization, audit logging, threat modeling, and automated testing. VMware Tanzu Greenplum is the target integration.",
-      description: "A security-focused Model Context Protocol (MCP) server project exploring controlled database access, authentication, authorization, audit logging, threat modeling, and automated testing. VMware Tanzu Greenplum is the target integration.",
-      status: "Security-Focused MCP Server Project in Development",
-      testStatus: "To be verified",
-      greenplumIntegration: "Target integration",
-      pythonFoundation: "To be verified",
-      typescriptImplementation: "In development",
-      // TO VERIFY: repository URL has not been confirmed; renderer must not treat this as a URL.
-      github: "To be confirmed"
+      name: { id: "Secure MCP Server untuk Kali Linux", en: "Secure MCP Server for Kali Linux" },
+      category: { id: "MCP / Keamanan Linux", en: "MCP / Linux Security" },
+      label: { id: "Proyek unggulan", en: "Featured project" },
+      objective: {
+        id: "Server MCP untuk Kali Linux yang menyediakan tool baca-saja yang diizinkan secara eksplisit. Dirancang tanpa endpoint shell umum atau eksekusi kode arbitrer.",
+        en: "An MCP server for Kali Linux that exposes explicitly allowlisted read-only tools. It is designed without a generic shell endpoint or arbitrary code execution."
+      },
+      description: {
+        id: "Server MCP untuk Kali Linux yang menyediakan tool baca-saja yang diizinkan secara eksplisit. Dirancang tanpa endpoint shell umum atau eksekusi kode arbitrer.",
+        en: "An MCP server for Kali Linux that exposes explicitly allowlisted read-only tools. It is designed without a generic shell endpoint or arbitrary code execution."
+      },
+      built: {
+        id: "OAuth 2.0 + PKCE, scope mcp:read, TLS, validasi host, rate limiting, dan audit log dengan redaksi nilai sensitif.",
+        en: "OAuth 2.0 + PKCE, the mcp:read scope, TLS, host validation, rate limiting, and audit logs with sensitive-value redaction."
+      },
+      learned: {
+        id: "Least privilege, pemisahan autentikasi dan otorisasi, validasi input, serta pentingnya bukti pengujian.",
+        en: "Least privilege, separating authentication from authorization, input validation, and the importance of test evidence."
+      },
+      status: { id: "Rilis v1.0.0; pengembangan berlanjut", en: "v1.0.0 released; ongoing development" },
+      testStatus: { id: "CI repositori: 123 test lulus; tes integrasi dikecualikan dari perintah CI tersebut.", en: "Repository CI: 123 tests passed; integration tests are excluded from that CI command." },
+      github: "https://github.com/Zer-security/secure-mcp-server"
+    },
+    {
+      name: { id: "Zer OS", en: "Zer OS" },
+      category: { id: "Operating System", en: "Operating System" },
+      label: { id: "In development", en: "In development" },
+      objective: {
+        id: "Proyek sistem operasi Linux kustom. Lihat repositori untuk kode, rancangan, dan status implementasi terkini.",
+        en: "A custom Linux operating-system project. See the repository for source code, design notes, and current implementation status."
+      },
+      status: { id: "In development", en: "In development" },
+      github: "https://github.com/Zer-security/zer-os"
+    },
+    {
+      name: { id: "Linux Kernel", en: "Linux Kernel" },
+      category: { id: "Kernel Development", en: "Kernel Development" },
+      label: { id: "OS foundation", en: "OS foundation" },
+      objective: {
+        id: "Repositori kernel Linux fork yang menjadi fondasi pengembangan sistem operasi kustom.",
+        en: "A forked Linux kernel repository intended as a foundation for custom operating-system development."
+      },
+      status: { id: "Kernel foundation", en: "Kernel foundation" },
+      github: "https://github.com/Zer-security/Linux-Kernel"
+    },
+    {
+      name: { id: "Security Tools", en: "Security Tools" },
+      category: { id: "Python / Security", en: "Python / Security" },
+      label: { id: "Utility collection", en: "Utility collection" },
+      objective: {
+        id: "Kumpulan utilitas Python untuk pembelajaran cybersecurity, inspeksi jaringan, DNS/OSINT, pemeriksaan keamanan web, hashing, dan riset defensif.",
+        en: "A collection of Python utilities for cybersecurity learning, network inspection, DNS and OSINT, web-security checks, hashing, and defensive research."
+      },
+      status: { id: "In development", en: "In development" },
+      github: "https://github.com/Zer-security/security-tools"
     },
     {
       name: { id: "Portofolio Website Ini", en: "This Portfolio Website" },
