@@ -81,10 +81,6 @@ The portfolio website presents selected projects, skills, write-ups, and other l
 
 Live profile statistics are intentionally not duplicated here because they may change over time. Visit the platforms for their current information.
 
-## Contact
-
-For professional or project-related contact, visit my [LinkedIn profile](https://www.linkedin.com/in/fathon-r-97636842a/).
-
 ---
 
 This repository documents an ongoing cybersecurity learning journey. Project claims and progress should be evaluated against the available source code, documentation, and verification evidence.
